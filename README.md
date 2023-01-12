@@ -1,1 +1,1 @@
-# Assignment-2
+# Crypto-Currency account management and play to earn game
