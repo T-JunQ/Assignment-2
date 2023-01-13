@@ -3,5 +3,4 @@ Our project is based on a marketplace where you are able to buy,sell and overloo
 
 ## Design Process
 
-
-a
+The purpose of our project is to make selling of game items easier. 
