@@ -3,7 +3,7 @@ Our project is based on a marketplace where you are able to buy,sell and overloo
 
 ## Design Process
 
-The purpose of our project is to make selling of game items easier. 
+The purpose of our website is to make buying and selling of video game items easier and simpler. 
 
 ## Library
 
