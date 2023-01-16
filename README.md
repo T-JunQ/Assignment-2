@@ -18,6 +18,16 @@ For the audience of our website, we are anticipating Buyers, Sellers and Potenti
 | Seller | Sell unwanted items in exchange for money | Make a easy-to-use listing page to list their items down and a page to track their listings |
 | Potencial users | Find out if the website is trustworthy and useful | Make a front page of the website advertising the service and how it beats out other alternatives |
 
+## Features
+### To Add:
+- Front Page to advertise service
+- Login page and functionality
+  - 2 facotr authentication with email
+- Navigation bar
+- Marketplace page 
+  - Search for listings names
+  - Filtering for specific categories
+    - Item listing page
 
 
 ## Library
