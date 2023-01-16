@@ -10,6 +10,12 @@ For the audience of our website, we are anticipating Buyers, Sellers and Potenti
 - As a Seller, I would want to sell off items i do not want anymore, so that I can get some money from my unwanted items and get rid of it.
 - As a Potential user, I would want to see if the website is trustable and better than other alternatives, so that i can decide if I would want to use this website to buy and sell Items.
 
+### Audience breakdown
+
+| Audience | Goals | How to help them achieve goals |
+| -------- | ----- | ------------------------------ |
+| Buyer | Buy game items for cosmetics or gameplay purposes | Make a intuitive marketplace where buyers can search and filter for the items they want |
+
 ## Library
 
 https://smtpjs.com/ - Send Email
