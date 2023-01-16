@@ -13,8 +13,9 @@ For the audience of our website, we are anticipating Buyers, Sellers and Potenti
 ### Audience breakdown
 
 | Audience | Goals | How to help them achieve goals |
-| -------- | ----- | ------------------------------ |
+| -------- | ----- | ----------- |
 | Buyer | Buy game items for cosmetics or gameplay purposes | Make a intuitive marketplace where buyers can search and filter for the items they want |
+
 
 ## Library
 
