@@ -15,6 +15,9 @@ For the audience of our website, we are anticipating Buyers, Sellers and Potenti
 | Audience | Goals | How to help them achieve goals |
 | -------- | ----- | ----------- |
 | Buyer | Buy game items for cosmetics or gameplay purposes | Make a intuitive marketplace where buyers can search and filter for the items they want |
+| Seller | Sell unwanted items in exchange for money | Make a easy-to-use listing page to list their items down and a page to track their listings |
+| Potencial users | Find out if the website is trustworthy and useful | Make a front page of the website advertising the service and how it beats out other alternatives |
+
 
 
 ## Library
