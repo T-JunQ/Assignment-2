@@ -37,6 +37,8 @@ For the audience of our website, we are anticipating Buyers, Sellers and Potenti
 - Configure profile page
   - Change profile details
 - Listing of items page
+- Account Balance
+  - Adding money to balance
 
 
 ## Library
