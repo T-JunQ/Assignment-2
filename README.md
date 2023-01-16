@@ -22,12 +22,21 @@ For the audience of our website, we are anticipating Buyers, Sellers and Potenti
 ### To Add:
 - Front Page to advertise service
 - Login page and functionality
-  - 2 facotr authentication with email
+  - 2 factor authentication using email
 - Navigation bar
 - Marketplace page 
-  - Search for listings names
+  - Search for item names
   - Filtering for specific categories
-    - Item listing page
+  - Sorting of listings
+- Item's Listing page
+  - Item price line chart
+  - Buying item functionality
+- User's Profile page
+  - Inventory of items 
+  - Transactions and listings
+- Configure profile page
+  - Change profile details
+- Listing of items page
 
 
 ## Library
