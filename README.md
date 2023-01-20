@@ -20,8 +20,7 @@ For the audience of our website, we are anticipating Buyers, Sellers and Potenti
 
 ### Wireframes and mockups
 
-Wireframe :[image](https://user-images.githubusercontent.com/116868179/213728924-d3172a45-9bc7-4063-9e77-73879756f292.png)
-
+Wireframe :https://xd.adobe.com/view/bf3381a1-7660-4c55-b8a4-dbb784ff1f82-ea60/
 
 ## Features
 ### To Add:
