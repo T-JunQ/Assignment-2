@@ -18,6 +18,11 @@ For the audience of our website, we are anticipating Buyers, Sellers and Potenti
 | Seller | Sell unwanted items in exchange for money | Make a easy-to-use listing page to list their items down and a page to track their listings |
 | Potencial users | Find out if the website is trustworthy and useful | Make a front page of the website advertising the service and how it beats out other alternatives |
 
+### Wireframes and mockups
+
+Wireframe :[image](https://user-images.githubusercontent.com/116868179/213728924-d3172a45-9bc7-4063-9e77-73879756f292.png)
+
+
 ## Features
 ### To Add:
 - Front Page to advertise service
