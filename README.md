@@ -32,8 +32,7 @@ Wireframe :https://xd.adobe.com/view/bf3381a1-7660-4c55-b8a4-dbb784ff1f82-ea60/
   - Search for item names
   - Filtering for specific categories
   - Sorting of listings
-- Item's Listing page
-  - Item price line chart
+- Cart Page
   - Buying item functionality
 - User's Profile page
   - Inventory of items 
