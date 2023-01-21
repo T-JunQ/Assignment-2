@@ -50,3 +50,8 @@ Wireframe :https://xd.adobe.com/view/bf3381a1-7660-4c55-b8a4-dbb784ff1f82-ea60/
 ## Library
 
 https://smtpjs.com/ - Send Email
+
+## Refrences
+
+https://www.vecteezy.com/vector-art/3987132-modern-abstract-light-dynamic-stripe-gradient-purple-background-can-be-used-as-banner-frame-website-or-presentation
+
