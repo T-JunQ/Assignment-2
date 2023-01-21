@@ -55,3 +55,5 @@ https://smtpjs.com/ - Send Email
 
 https://www.vecteezy.com/vector-art/3987132-modern-abstract-light-dynamic-stripe-gradient-purple-background-can-be-used-as-banner-frame-website-or-presentation
 
+https://www.pngitem.com/middle/mwixJh_csgo-skins-png-transparent-png/
+
