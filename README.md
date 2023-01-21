@@ -1,5 +1,7 @@
 # Game items Marketplace
 Our project is based on a marketplace called GameHub where you are able to buy,sell and overlook game items. The site would promote the service to users of the website, create or log into a account, view all of the item listings by diffrent users and the games associated with them, list items they have bought from the website and see the items they have bought.
+
+
 <img src="https://user-images.githubusercontent.com/116868179/213856169-7f033e52-cf92-424e-a7bf-3637bc06c36d.png" alt="gamehub logo" width=100px heigh=100px>
 
 ## Design Process
