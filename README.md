@@ -60,6 +60,8 @@ https://www.pngitem.com/middle/mwixJh_csgo-skins-png-transparent-png/
 
 https://www.kindpng.com/downpng/himbwmx_5-star-customer-feedback-trustpilot-logo-hd-png/
 
+https://pngtree.com/freepng/hand-drawn-cartoon-cyber-security-infographic_5053337.html
+
 ### Aknowledgement
 
 Logo made using https://logo.com/
