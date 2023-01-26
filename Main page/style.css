@@ -1,5 +1,9 @@
 body{
-    margin:0;
+   
+    background-image: url("Background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 nav{
@@ -38,5 +42,11 @@ nav img{
 
 
 
-
-
+#header{
+    font-size: 30px;
+    
+    color: azure;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 100px;
+    margin-top: 250px;
+}
