@@ -4,7 +4,11 @@ html{
 
 
 body{
-    margin:0;
+   
+    background-image: url("Background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 nav{
@@ -49,4 +53,15 @@ nav img{
 
 
 
+<<<<<<< HEAD:style.css
 
+=======
+#header{
+    font-size: 30px;
+    
+    color: azure;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 100px;
+    margin-top: 250px;
+}
+>>>>>>> b67e79ae4ebe65950a4f3b0135079dd0b61206a1:Main page/style.css
