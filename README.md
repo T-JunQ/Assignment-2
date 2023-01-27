@@ -33,7 +33,6 @@ Wireframe :https://xd.adobe.com/view/bf3381a1-7660-4c55-b8a4-dbb784ff1f82-ea60/
 
 - Front Page to advertise service
 - Login page and functionality
-  - 2 factor authentication using email
 - Navigation bar
 - Marketplace page
   - Search for item names
