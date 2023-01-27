@@ -5,7 +5,7 @@ html{
 
 body{
    
-    background-image: url("Background.jpg");
+    background-image: url("pics/Background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -53,9 +53,6 @@ nav img{
 
 
 
-<<<<<<< HEAD:style.css
-
-=======
 #header{
     font-size: 30px;
     
@@ -64,4 +61,3 @@ nav img{
     margin-left: 100px;
     margin-top: 250px;
 }
->>>>>>> b67e79ae4ebe65950a4f3b0135079dd0b61206a1:Main page/style.css
