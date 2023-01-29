@@ -1,10 +1,71 @@
-#background_img {
-    background-image: url("../pics/Background.jpg");
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    top:0px;
-    height: 1080px; 
-    background-position: 0px 0px;
-    background-repeat: no-repeat;
-    background-size: 100%;
+html,body{
+    margin:0;
+    padding: 0;
+    height:100%;
+    background-color: blueviolet;
 }
+
+#background{
+    background-image: url("../pics/Background.jpg");
+    background-size: cover;
+    left: 0;
+    width:100%;
+    height:100%;
+    filter: blur(8px);
+}
+
+#form_window{
+    width: 40%;
+    padding: 20px;
+    background-color:indigo;
+    position: absolute;
+    top:10%;
+    left:30%;
+    text-align: center;
+    border-radius: 30px;
+    color: aliceblue;
+    border: 1px black solid;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+}
+.form-control {
+    margin-bottom: 20px;
+}
+
+.btn{
+    color: white;
+    background-color:cornflowerblue;
+}
+
+.btn:hover{
+    animation-name: submit;
+    animation-duration: 0.5s;
+    animation-direction:normal;
+    box-shadow: 3px 4px 4px cornflowerblue;
+    background-color:aqua;
+}
+
+.control-label{
+    text-align: left;
+}
+
+#bottom_label{
+    margin-top: 20%;
+}
+
+#back{
+    left:20px;
+    font-size: 25px;
+    position: absolute;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+@keyframes submit {
+    0% {box-shadow: none;}
+    100% {box-shadow: 3px 4px 4px cornflowerblue;background-color:aqua;}
+}
+
