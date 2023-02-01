@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+
+nav{
+    height: 45px;
+    width: 100%;
+    border: 2px solid black;
+    position: fixed;
+    background-color: #23003A;
+    top: -1px;
+    left:0px;
+    z-index: 10;
+    margin:0px;
+    padding:0px;
+}
+
+#nav_buttons{
+    float: right;
+    margin: 10px;
+    margin-top: 9px;
+    margin-right: 10px;
+}
+
+#nav_buttons p{
+    display: inline;
+}
+
+#nav_buttons a{
+    text-decoration: none;
+    text-align: center;
+    color: aliceblue;
+    display: inline;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-right: 32px;
+}
+
+#nav_buttons div{
+    margin-right: 5px;
+}
+
+#nav_profile{
+    background-color: #005DAD;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 15px;
+    border-radius: 10px;
+    display: inline;
+    margin-left: 8px;
+}
+
+#nav_username{
+    margin-left: 5px;
+    margin-right: 0px !important;
+}
+
+#nav_profilepic{
+    border-radius: 50%;
+    margin-top: -5px;
+    position: relative;
+    border: #23003A 1px solid;
+}
+
+#nav_balance{
+    display: inline;
+    border: aliceblue 2px solid;
+    padding: 3px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#nav_add{
+    font-size: 10px;
+    background-color: #005DAD;
+    border-radius: 50%;
+    padding:3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 0;
+    margin-left: 10px;
+    margin-right: 5px!important;
+    position: relative;
+    bottom: 2px;
+}
+
+nav #nav_buttons .nav_icons
+{
+    color: #005DAD;
+  font-size: 10px;
+}
+
+
+nav img{
+    margin-top:4px;
+    margin-left: 5px;
+}
+
+.activepage{
+    font-weight: 800;
+    color: blue;
+}

@@ -16,7 +16,7 @@ body{
 }
 
 nav{
-    height: 50px;
+    height: 45px;
     width: 100%;
     border: 2px solid black;
     position: fixed;
@@ -30,8 +30,8 @@ nav{
 
 .nav_buttons{
     float: right;
-    margin-top: 15px;
-    margin-right: 40px;
+    margin-top: 14px;
+    margin-right: 20px;
 }
 
 .nav_buttons a{
@@ -47,8 +47,8 @@ nav{
 }
 
 nav img{
-    padding-top:8px;
-    padding-left: 5px;
+    margin-top:6px;
+    margin-left: 5px;
 }
 #homepage{
     background-image: url(pics/vecteezy_modern-abstract-light-dynamic-stripe-gradient-purple_3987132.jpg);

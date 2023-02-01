@@ -1,23 +1,61 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Marketplace</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="../css/marketplace.css">
-  </head>
-  <body>
-    <nav>
-        <a href="" id="nav_logo"><img src="../pics/logoleft.png" alt="logo" height="35px" width="55px"></a>
-        <div class="nav_buttons">
-          <a href="" class="nav_button">Username</a>
-          <a href="" class="nav_button">Username</a>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marketplace</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="../css/marketplace.css">
+</head>
+
+<body>
+  <header>
+    <div id="includehtml"></div>
+  </header> 
+  <div id="mp_filterbar">
+    <form id="form-inline ">
+      <div class="row">
+          <div class="form-group">
+          <select class="form-select filter_inputs" id="game_filter">
+            <option selected disabled>Game</option>
+            <option value="1">CS-GO</option>
+            <option value="2">Valorant</option>
+          </select>
+          </div>
+        <div class="form-group">
+          <select class="form-select filter_inputs" id="game_filter">
+            <option selected disabled>Price Range</option>
+            <option value="1">$1-10</option>
+            <option value="2">$10-50</option>
+            <option value="2">$50-100</option>
+          </select>
         </div>
-    </nav>
-    
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>-->
-    <script src="script.js"></script>
-  </body>
+        <div class="form-group">
+          <select class="form-select filter_inputs" id="sortby_filter">
+            <option selected disabled>Sort By</option>
+            <option value="1">Price <i class="fa-solid fa-up"></i></option>
+            <option value="2">Price </option>
+            <option value="2">$50-100</option>
+          </select>
+        </div>
+        <div class="col-md-4 offset-md-4 form-group">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search_input">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="https://kit.fontawesome.com/7f958d91e0.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="../scripts/marketplace.js"></script>
+</body>
+
 </html>

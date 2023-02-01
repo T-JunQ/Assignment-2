@@ -64,6 +64,10 @@ h1{
     border: none;
     outline: none;
 }
+
+#form_window input{
+    border: 1px black solid;
+}
 @keyframes submit {
     0% {box-shadow: none;}
     100% {box-shadow: 3px 4px 4px cornflowerblue;background-color:aqua;}
