@@ -58,6 +58,8 @@ Github pages: https://t-junq.github.io/Assignment-2/
 
 https://smtpjs.com/ - Send Email
 
+https://fontawesome.com/ - Fonts for html
+
 ## Refrences
 
 ### Media
@@ -69,6 +71,8 @@ https://www.pngitem.com/middle/mwixJh_csgo-skins-png-transparent-png/
 https://www.kindpng.com/downpng/himbwmx_5-star-customer-feedback-trustpilot-logo-hd-png/
 
 https://pngtree.com/freepng/hand-drawn-cartoon-cyber-security-infographic_5053337.html
+
+https://www.pngfind.com/mpng/hmwRhhw_csgo-skins-transparent-hd-png-download/
 
 ### Aknowledgement
 
