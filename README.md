@@ -58,7 +58,7 @@ Github pages: https://t-junq.github.io/Assignment-2/
 
 https://smtpjs.com/ - Send Email
 
-https://fontawesome.com/ - Fonts for html
+https://fontawesome.com/ - Icons for html
 
 ## Refrences
 
