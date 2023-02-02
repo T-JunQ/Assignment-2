@@ -65,3 +65,23 @@ nav img{
     margin-left: 100px;
     margin-top: 250px;
 }
+
+
+#blue_border{
+    box-shadow: 10px 10px;
+    background-color: #005DAD;
+    border-radius: 15px;
+    width: 500px;
+    margin: 36px;
+    
+}
+
+
+#guns{
+    margin: 1000px;
+    margin-top: -550px;
+    -ms-transform: rotate(65deg); 
+    transform: rotate(65deg);
+    
+
+}
