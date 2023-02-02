@@ -30,13 +30,16 @@ Wireframe: https://xd.adobe.com/view/bf3381a1-7660-4c55-b8a4-dbb784ff1f82-ea60/
 Github pages: https://t-junq.github.io/Assignment-2/
 
 ## Features
+### Implemented
 
-### To Add:
-
-- Front Page to advertise service
 - Login page and functionality
 - Navigation bar
 - Marketplace page
+- 
+### To Add:
+
+- Front Page to advertise service
+
   - Search for item names
   - Filtering for specific categories
   - Sorting of listings
