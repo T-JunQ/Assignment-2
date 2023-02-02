@@ -23,18 +23,23 @@ For the audience of our website, we are anticipating Buyers, Sellers and Potenti
 | Seller          | Sell unwanted items in exchange for money         | Make a easy-to-use listing page to list their items down and a page to track their listings      |
 | Potencial users | Find out if the website is trustworthy and useful | Make a front page of the website advertising the service and how it beats out other alternatives |
 
-### Wireframes and mockups
+### Wireframes and links
 
-Wireframe :https://xd.adobe.com/view/bf3381a1-7660-4c55-b8a4-dbb784ff1f82-ea60/
+Wireframe: https://xd.adobe.com/view/bf3381a1-7660-4c55-b8a4-dbb784ff1f82-ea60/
+
+Github pages: https://t-junq.github.io/Assignment-2/
 
 ## Features
+### Implemented
 
+- Login page and functionality
+- Navigation bar
+- Marketplace page 
+- 
 ### To Add:
 
 - Front Page to advertise service
-- Login page and functionality
-- Navigation bar
-- Marketplace page
+- Marketplace functionality
   - Search for item names
   - Filtering for specific categories
   - Sorting of listings
@@ -53,6 +58,8 @@ Wireframe :https://xd.adobe.com/view/bf3381a1-7660-4c55-b8a4-dbb784ff1f82-ea60/
 
 https://smtpjs.com/ - Send Email
 
+https://fontawesome.com/ - Icons for html
+
 ## Refrences
 
 ### Media
@@ -64,6 +71,8 @@ https://www.pngitem.com/middle/mwixJh_csgo-skins-png-transparent-png/
 https://www.kindpng.com/downpng/himbwmx_5-star-customer-feedback-trustpilot-logo-hd-png/
 
 https://pngtree.com/freepng/hand-drawn-cartoon-cyber-security-infographic_5053337.html
+
+https://www.pngfind.com/mpng/hmwRhhw_csgo-skins-transparent-hd-png-download/
 
 ### Aknowledgement
 
