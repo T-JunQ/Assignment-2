@@ -34,12 +34,12 @@ Github pages: https://t-junq.github.io/Assignment-2/
 
 - Login page and functionality
 - Navigation bar
-- Marketplace page
+- Marketplace page 
 - 
 ### To Add:
 
 - Front Page to advertise service
-
+- Marketplace functionality
   - Search for item names
   - Filtering for specific categories
   - Sorting of listings
