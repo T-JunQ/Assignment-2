@@ -80,7 +80,7 @@ $("document").ready(function () {
       console.log(response);
       $("#sucess").modal("show");
       $("#sucess").on("hidden.bs.modal", function () {
-        sessionStorage.setItem("Account", response);
+        sessionStorage.setItem("Account", JSON.stringify(response));
         window.location.href = "../templates/marketplace.html";
       });
     });
@@ -112,8 +112,8 @@ $("document").ready(function () {
           $("#login_submit").html(
             `<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_ht6o1bdu.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px; margin-left:auto; margin-right:auto;"  loop  autoplay></lottie-player>`
           );
-          sessionStorage.setItem("Account", response[i]);
-          console.log(response[i]);
+          sessionStorage.setItem("Account", JSON.stringify(response[i]));
+          console.log(sessionStorage.getItem("Account"));
           window.location.href = "../templates/marketplace.html";
         }
       }

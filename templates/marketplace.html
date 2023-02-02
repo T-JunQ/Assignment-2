@@ -13,42 +13,59 @@
 <body>
   <header>
     <div id="includehtml"></div>
-  </header> 
-  <div id="mp_filterbar">
-    <form id="form-inline ">
+  </header>
+  <div id="mp_filterbar" class="container-fluid">
+    <form id="mp_filterform">
       <div class="row">
-          <div class="form-group">
+        <div class="col-2 form-group">
           <select class="form-select filter_inputs" id="game_filter">
-            <option selected disabled>Game</option>
-            <option value="1">CS-GO</option>
-            <option value="2">Valorant</option>
-          </select>
-          </div>
-        <div class="form-group">
-          <select class="form-select filter_inputs" id="game_filter">
-            <option selected disabled>Price Range</option>
-            <option value="1">$1-10</option>
-            <option value="2">$10-50</option>
-            <option value="2">$50-100</option>
+            <option selected>Any Game 🎮</option>
+            <option value="1" data-game="Counter Strike-Global Offensive">Counter Strike-Global Offensive</option>
+            <option value="2" data-game="Valorant">Valorant</option>
           </select>
         </div>
-        <div class="form-group">
+        <div class="col-2 form-group">
+          <select class="form-select filter_inputs" id="game_filter">
+            <option selected disabled>Range 🏷</option>
+            <option value="1" data-range="0-1">$0-1</option>
+            <option value="2" data-range="1-10">$1-10</option>
+            <option value="3" data-range="10-50">$10-50</option>
+            <option value="4" data-range="50-100">$50-100</option>
+            <option value="5" data-range="100-500">$100-500</option>
+          </select>
+        </div>
+        <div class="col-2 form-group">
           <select class="form-select filter_inputs" id="sortby_filter">
-            <option selected disabled>Sort By</option>
-            <option value="1">Price <i class="fa-solid fa-up"></i></option>
-            <option value="2">Price </option>
-            <option value="2">$50-100</option>
+            <option selected disabled>Sort By ⬍</option>
+            <option value="1">Price ▲</option>
+            <option value="2">Price ▼</option>
           </select>
         </div>
-        <div class="col-md-4 offset-md-4 form-group">
+        <div class="col-2  filter_search_input">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search_input">
         </div>
-        <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-3">Search</button>
+        <div class="col-2">
+          <button type="submit" class="btn btn-primary mb-1" id="search_submit"><i
+              class="fa-solid fa-magnifying-glass"></i></button>
         </div>
       </div>
     </form>
   </div>
+
+  <div id="mp_listings" >
+
+    <!-- <div class="listing" hidden>
+      <h2 class="item_name"></h2>
+      <h3 class="game_name"></h3>
+        <div class="img_container">
+        <img class="img-thumbnail item_img img-fluid" src="">
+      </div>
+      <h2 class="item_price"></h2>
+      <button class="btn btn-primary" class="addtocart"><i class="fa-solid fa-cart-plus"></i></i></button>
+    </div> -->
+
+</div>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="https://kit.fontawesome.com/7f958d91e0.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>

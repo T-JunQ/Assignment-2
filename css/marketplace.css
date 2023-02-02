@@ -1,37 +1,138 @@
 @import url('https://fonts.googleapis.com/css2?family=Baumans&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-html, body{
-    margin:0;
-    padding:0;
-    top:0;
-    background-color: #452470;
+.activepage {
+    font-weight: 800;
+    color: blue;
 }
 
-#mp_filterbar{
+html,
+body {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    background-color: #452470;
+    width: 100%;
+    height: 100%;
+}
+
+#mp_filterbar {
     position: relative;
-    top:30px;
-    left:2%;
+    top: 30px;
     width: 96%;
     height: 50px;
-    background-color:#005DAD;
-    border:black 1px solid;
+    background-color: #005DAD;
+    border: black 1px solid;
     border-radius: 10px;
 }
 
-.filter_search{
-    display: inline;
+#search_input{
+    margin-top:5px;
+    margin-left: 300%;
+    border: 1px black solid;
 }
 
-.mp_filterrow{
-    display:inline-flex;
-    justify-content: space-evenly;
+
+#search_submit {
+    position: relative;
+    margin-top:5px;
+    border: 1px black solid;
+    margin-left: 294%;
 }
+
 
 .filter_inputs{
-    width:150%;
-    margin-right: 20px;
+    width: 70%;
+    border: 1px black solid;
 }
 
 
+.form-group {
+    margin-top: 5px;
+    margin-right: -5%;
+}
 
+#mp_listings{  
+    position: relative; 
+    top: 40px;
+    left: 2%;
+    width: 96%;
+    height: 82%;
+    background-color: #005DAD;
+    border: black 1px solid;
+    border-radius: 10px;
+    overflow-y:auto;
+    display: flex;
+    gap:40px;
+    justify-content: start;
+    padding: 10px;
+    padding-left: 30px;
+    flex-wrap: wrap;
+    
+}
+
+div::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+  
+  div::-webkit-scrollbar {
+    width: 8px;
+    background-color: none;
+  }
+  
+  div::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color:darkblue;
+  }
+
+
+.listing{
+    height:355px;
+    width:250px;
+    background-color:#23003A;
+    border:black 2px solid;
+    /* margin-left: 1.5%;
+    margin-top: 1%; */
+    border-radius: 10px;
+    color: aliceblue;
+    text-align: center;
+    padding: 0.4%;
+    
+}
+
+.item_name,.item_price{
+    font-size:18px;
+    color: white;
+}
+
+.item_price{
+    font-size:19px;
+    margin: 10px;
+}
+
+.game_name{
+    font-size: 10px;
+    color:azure;
+}
+
+.item_img{
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    background: none;
+    border: none;
+    top:10%;
+}
+
+.img_container{
+    width: 210px;
+    height: 200px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(60,189,255,1) 0%, rgba(0,93,173,1) 85%);
+    border: black 2px solid;
+    margin-left: 13px;
+}
 

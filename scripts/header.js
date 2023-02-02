@@ -1,10 +1,22 @@
 $(document).ready(function ($) {
   var url = window.location.href;
-  var activePage = url;
-  $("nav #nav_buttons a").each(function () {
+  let account = JSON.parse(sessionStorage.getItem("Account"));
+  console.log(account);
+  console.log(account.username);
+  $("#nav_username").text(account.username);
+  $("#nav_balance p").text(`$ ${account.balance}`);
+  $("#nav_buttons a").each(function () {
+    console.log(url);
     var linkPage = this.href;
-    if (activePage == linkPage) {
-      $(this).addClass("activepage");
+    if (url == linkPage) {
+      $(this).css({
+        "font-weight": "700",
+        color: "white",
+      });
     }
+  });
+
+  $("#nav_profile").click(function () {
+    window.location.href = "";
   });
 });
