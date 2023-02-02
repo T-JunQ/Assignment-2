@@ -23,9 +23,11 @@ For the audience of our website, we are anticipating Buyers, Sellers and Potenti
 | Seller          | Sell unwanted items in exchange for money         | Make a easy-to-use listing page to list their items down and a page to track their listings      |
 | Potencial users | Find out if the website is trustworthy and useful | Make a front page of the website advertising the service and how it beats out other alternatives |
 
-### Wireframes and mockups
+### Wireframes and links
 
-Wireframe :https://xd.adobe.com/view/bf3381a1-7660-4c55-b8a4-dbb784ff1f82-ea60/
+Wireframe: https://xd.adobe.com/view/bf3381a1-7660-4c55-b8a4-dbb784ff1f82-ea60/
+
+Github pages: https://t-junq.github.io/Assignment-2/
 
 ## Features
 
