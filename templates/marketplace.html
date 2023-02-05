@@ -7,6 +7,7 @@
   <title>Marketplace</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/marketplace.css">
 </head>
 
@@ -19,53 +20,78 @@
       <div class="row">
         <div class="col-2 form-group">
           <select class="form-select filter_inputs" id="game_filter">
-            <option selected>Any Game 🎮</option>
-            <option value="1" data-game="Counter Strike-Global Offensive">Counter Strike-Global Offensive</option>
+            <option selected data-game="any">Any Game 🎮</option>
+            <option value="1" data-game="Counter Strike: Global Offensive">Counter Strike: Global Offensive</option>
             <option value="2" data-game="Valorant">Valorant</option>
           </select>
         </div>
         <div class="col-2 form-group">
-          <select class="form-select filter_inputs" id="game_filter">
-            <option selected disabled>Range 🏷</option>
-            <option value="1" data-range="0-1">$0-1</option>
-            <option value="2" data-range="1-10">$1-10</option>
-            <option value="3" data-range="10-50">$10-50</option>
-            <option value="4" data-range="50-100">$50-100</option>
-            <option value="5" data-range="100-500">$100-500</option>
+          <select class="form-select filter_inputs" id="price_filter">
+            <option selected data-start="0" data-end="1000000">Any price 🏷</option>
+            <option value="1" data-start="0" data-end="5">$0-5</option>
+            <option value="2" data-start="5" data-end="10">$5-10</option>
+            <option value="3" data-start="10" data-end="50">$10-50</option>
+            <option value="4" data-start="50" data-end="100">$50-100</option>
+            <option value="5" data-start="100" data-end="500">$100-500</option>
+            <option value="6" data-start="500" data-end="1000">$500-1000</option>
+            <option value="7" data-start="1000" data-end="5000">$1000-5000</option>
           </select>
         </div>
         <div class="col-2 form-group">
           <select class="form-select filter_inputs" id="sortby_filter">
             <option selected disabled>Sort By ⬍</option>
-            <option value="1">Price ▲</option>
-            <option value="2">Price ▼</option>
+            <option value="1" data-sortby="asc">Price ▲</option>
+            <option value="2" data-sortby="desc">Price ▼</option>
           </select>
         </div>
         <div class="col-2  filter_search_input">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search_input">
-        </div>
-        <div class="col-2">
-          <button type="submit" class="btn btn-primary mb-1" id="search_submit"><i
-              class="fa-solid fa-magnifying-glass"></i></button>
+          <input class="form-control me-2" type="search" placeholder="Search items" id="search_input">
         </div>
       </div>
     </form>
   </div>
 
-  <div id="mp_listings" >
-
-    <!-- <div class="listing" hidden>
-      <h2 class="item_name"></h2>
-      <h3 class="game_name"></h3>
+  <div id="mp_listings">
+    <!-- <div class="listing">
+      <h2 class="item_name">dsadas</h2>
+      <h3 class="game_name">dsadas</h3>
         <div class="img_container">
-        <img class="img-thumbnail item_img img-fluid" src="">
+        <img class="img-thumbnail item_img img-fluid" src="../pics/Luxe_Ghost.png">
       </div>
-      <h2 class="item_price"></h2>
-      <button class="btn btn-primary" class="addtocart"><i class="fa-solid fa-cart-plus"></i></i></button>
+      <h2 class="item_price">$ 9999</h2>
+      <button class="btn btn-primary" class="addtocart">Add To Cart<i class="fa-solid fa-cart-plus"></i></i></button><br>
+      <div class="seller">
+        <img class="seller_pic" src="../pics/vecteezy_profile-icon-design-vector_5544718.jpg" alt="profilepic"
+            onerror="src='../pics/vecteezy_profile-icon-design-vector_5544718.jpg'"  width="20px" height="20px">
+        <h4 class="seller_name">d</h4>
+    </div>
     </div> -->
+  </div>
 
-</div>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <div id="sucess" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Item added to cart!</h4>
+        </div>
+        <div class="modal-body">
+          <p></p>
+          <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_atunf5kv.json"  background="transparent"  speed="1"  style="width: 80px; height: 80px;"    autoplay></lottie-player>
+        </div>
+        <div class="modal-footer">
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="https://kit.fontawesome.com/7f958d91e0.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
