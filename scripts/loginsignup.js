@@ -54,14 +54,12 @@ $("document").ready(function () {
       async: true,
       crossDomain: true,
       url: "https://interactivedev-f58c.restdb.io/rest/accounts",
-      method: "POST",
+      method: "GET",
       headers: {
         "content-type": "application/json",
         "x-apikey": apikey,
         "cache-control": "no-cache",
       },
-      processData: false,
-      data: JSON.stringify(jsondata),
       beforeSend: function () {
         $("#submit_button").html(
           `<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_ht6o1bdu.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px; margin-left:auto; margin-right:auto;"  loop  autoplay></lottie-player>`
@@ -105,10 +103,10 @@ $("document").ready(function () {
     };
     $.ajax(settings).done(function (response) {
       console.log(response);
-      var logedin = false;
+      var loggedin = false;
       for (var i = 0; i < response.length; i++) {
         if (response[i].email == email && response[i].password === password) {
-          logedin = true;
+          loggedin = true;
           $("#login_submit").html(
             `<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_ht6o1bdu.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px; margin-left:auto; margin-right:auto;"  loop  autoplay></lottie-player>`
           );
@@ -117,7 +115,7 @@ $("document").ready(function () {
           window.location.href = "../templates/marketplace.html";
         }
       }
-      if (logedin === false) {
+      if (loggedin === false) {
         alert("The email or password is incorrect");
         $("#login_submit").html(
           `<button type="submit" class="btn btn-default">Log In</button>`

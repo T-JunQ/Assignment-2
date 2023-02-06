@@ -11,6 +11,15 @@ body {
     height: 100%;
 }
 
+.btn:hover{
+    animation-name: submit;
+    animation-duration: 0.5s;
+    animation-direction:normal;
+    box-shadow: 3px 4px 4px cornflowerblue;
+    background-color:rgb(51, 239, 239);
+}
+
+
 /* filter bar */
 
 #mp_filterbar {

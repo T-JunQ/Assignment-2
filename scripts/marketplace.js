@@ -1,8 +1,9 @@
 $("document").ready(function () {
   $("#includehtml").load("header.html");
   let apikey = "63b648a1969f06502871aa39";
+  let modal = $("#addedtocart");
   getListings();
-
+  var allListings = JSON.parse(sessionStorage.getItem("listings"));
   $("#game_filter").change(function () {
     filter();
   });
@@ -47,10 +48,26 @@ $("document").ready(function () {
     });
   });
 
-  $(".addtocart").each(function (i) {
-    i.click(function () {
-      console.log("text");
-    });
+  $("#mp_listings").on("click", ".addtocart", function (e) {
+    let id = $(this).parent().attr("id");
+    let modalbody = modal.find(".modal-body");
+    for (var i = 0; i < allListings.length; i++) {
+      if (allListings[i]._id == id) {
+        listing = allListings[i];
+      }
+    }
+    if (localStorage.getItem("cart") == null) {
+      localStorage.setItem("cart", [listing]);
+    } else {
+      let cartitems = localStorage.getItem("cart");
+      cartitems.push(listing);
+      localStorage.setItem("cart", listing);
+    }
+    console.log(localStorage.getItem("cart"));
+    modalbody.html(
+      `Item Name: ${listing.name}<br>Item Price: ${listing.price}`
+    );
+    modal.modal("show");
   });
 
   function filter() {
@@ -79,6 +96,7 @@ $("document").ready(function () {
   }
 
   function getListings() {
+    var myResponse;
     var settings = {
       async: true,
       crossDomain: true,
@@ -96,7 +114,7 @@ $("document").ready(function () {
       },
     };
     $.ajax(settings).done(function (response) {
-      console.log(response);
+      sessionStorage.setItem("listings", JSON.stringify(response));
       let content = "";
       for (var i = 0; i < response.length; i++) {
         var price = parseFloat(response[i].price).toFixed(2);
@@ -109,7 +127,7 @@ $("document").ready(function () {
             <img class="img-thumbnail item_img img-fluid" src="${response[i].image}" alt="itemimg" onerror="this.src='../pics/logo-no-background - Copy (2).png'">
           </div>
           <h2 class="item_price">$ ${price}</h2>
-          <button class="btn btn-primary" class="addtocart">Add to Cart <i class="fa-solid fa-cart-plus"></i></i></button>
+          <button class="btn btn-primary addtocart">Add to Cart <i class="fa-solid fa-cart-plus"></i></i></button>
           <div class="seller">
             <img class="seller_pic" src="${response[i].seller[0].picture}" alt="profilepic"
                 onerror="src='../pics/vecteezy_profile-icon-design-vector_5544718.jpg'"  width="15px" height="15px">

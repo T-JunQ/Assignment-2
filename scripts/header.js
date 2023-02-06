@@ -5,7 +5,16 @@ $(document).ready(function ($) {
   console.log(account.username);
   $("#nav_username").text(account.username);
   $("#nav_balance p").text(`$ ${account.balance}`);
-  $("#nav_profilepic").attr("src", account.picture);
+  console.log(account.picture);
+  if (account.picture != null) {
+    $("#nav_profilepic").attr("src", account.picture);
+  } else {
+    $("#nav_profilepic").attr(
+      "src",
+      "../pics/vecteezy_profile-icon-design-vector_5544718.jpg"
+    );
+  }
+
   $("#nav_buttons a").each(function () {
     console.log(url);
     var linkPage = this.href;

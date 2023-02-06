@@ -39,6 +39,24 @@
       <button class="btn btn-primary" id="buy_items">Check-Out</button><br>
       <button class="btn btn-danger" id="delete_items">Clear All</button><br>
     </div>
+
+    <div class="modal fade" id="failedbuy" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="exampleModalLabel" style="color:black">Insufficent funds</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style="color:black">
+            Please top-up your balance to buy the items.
+          </div>
+          <lottie-player src="https://assets1.lottiefiles.com/private_files/lf30_mlsj6yqm.json"  background="transparent"  speed="1"  style="width: 60px; height: 60px;"    autoplay></lottie-player>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <script src="https://kit.fontawesome.com/7f958d91e0.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
