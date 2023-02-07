@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    background:#452470;
+    width: 100%;
+    height: 100%;
+    color: aliceblue;
+    overflow: hidden;
+}
+
+#profile_window
+{
+    position: relative;
+    width: 90%;
+    height:90%;
+    margin-left: auto;
+    margin-right: auto;
+    top:8%;
+    border:1px black solid;
+    background-color:darkblue;
+    border-radius: 10px;
+    padding:1%;
+}
+
+#profile_pic{
+    width:200px;
+    height:200px;
+
+    border-radius: 50%;
+    border: 1px black solid;
+}
+
+#profile_details{
+    width: 200px;
+    text-align: center;
+    margin-left: 3%;
+}
+
+#username{
+    margin-top: 3%;
+}
+
+#edit_profile{
+    padding: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 30px;
+}
+
+#logout{
+    padding: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 120%;
+}
+
+#inventory{  
+    position: absolute; 
+    right: 2%;
+    top: 2%;
+    width: 70%;
+    height: 96%;
+    background-color:#005DAD;
+    border: black 1px solid;
+    border-radius: 10px;
+    overflow-y:auto;
+    display: flex;
+    gap:50px;
+    justify-content: start;
+    padding: 10px;
+    padding-left: 70px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+}
+
+.item{
+    height:350px;
+    width:240px;
+    background-color:#23003A;
+    border:black 2px solid;
+    border-radius: 10px;
+    color: aliceblue;
+    text-align: center;
+    padding: 0.4%;
+}
+
+.item_name,.item_price{
+    font-size:18px;
+    color: white;
+}
+
+.item_price{
+    font-size:19px;
+    margin: 10px;
+}
+
+.game_name{
+    font-size: 10px;
+    color:azure;
+}
+
+.item_img{
+    max-width: 210px;
+    height: auto;
+    position: relative;
+    background: none;
+    border: none;
+    top:30%;
+}
+
+.img_container{
+    width: 210px;
+    height: 200px;
+    border-radius: 10px;
+    background: radial-gradient(circle, rgba(157,221,254,1) 0%, rgba(5,133,213,1) 25%, rgba(35,0,58,1) 73%);
+    margin-left: 13px;
+}
+
+

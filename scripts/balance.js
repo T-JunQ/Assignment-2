@@ -3,7 +3,6 @@ $(document).ready(function () {
   let account = JSON.parse(sessionStorage.getItem("Account"));
   let apikey = "63b648a1969f06502871aa39";
   let successmodal = $("#sucessful");
-  console.log(successmodal.children("div.modal-body").html());
   if (rmb_card == "true") {
     $("#save_details").prop("checked", true);
     $("#card_no").val(localStorage.getItem("cardno"));
@@ -42,6 +41,8 @@ $(document).ready(function () {
       localStorage.removeItem("zip", zip);
     }
     let amount = $("#amount").val();
+    account.balance = parseFloat(account.balance);
+    amount = parseFloat(amount);
     account.balance += amount;
     updateBalance(
       account._id,
@@ -49,7 +50,7 @@ $(document).ready(function () {
       account.username,
       account.password,
       account.picture,
-      parseFloat(account.balance),
+      parseFloat(account.balance).toFixed(2),
       account.inventory
     );
   });

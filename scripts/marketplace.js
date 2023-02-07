@@ -115,7 +115,7 @@ $("document").ready(function () {
       },
       beforeSend: function () {
         $("#mp_listings").html(`
-        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_kxsd2ytq.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;margin-left:46%;align-self:center;"  loop  autoplay></lottie-player>
+        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_kxsd2ytq.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;margin-left:auto;margin-right:auto;align-self:center;"  loop  autoplay></lottie-player>
         `);
       },
     };

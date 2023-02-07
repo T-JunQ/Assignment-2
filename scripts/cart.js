@@ -6,7 +6,13 @@ $("document").ready(function () {
   let account = JSON.parse(sessionStorage.getItem("Account"));
   let failedmodal = $("#failedbuy");
   let successmodal = $("#sucessbuy");
+  let loading = $("#loading");
+
   showItems();
+
+  if (account == null) {
+    $("#cart_listings").html("<p>Please Log in to buy items</p>");
+  }
 
   $("#buy_items").click(function () {
     buyItems();
@@ -36,31 +42,38 @@ $("document").ready(function () {
     window.location.reload();
   });
 
-  function buyItems() {
+  async function buyItems() {
     let checkout = confirm("Are you sure you want to check-out?");
     if (checkout == true) {
       if (account.balance - total >= 0) {
-        parseFloat(account.balance);
+        account.balance = parseFloat(account.balance);
         account.balance -= total;
         for (var i = 0; i < cart.length; i++) {
+          loading.modal("show");
           account.inventory.items.push(cart[i]);
-          setTimeout(getSeller(cart[i].seller[0]._id, cart[i].price), 2000);
-          deleteItem(cart[i]._id);
+          setTimeout(getSeller(cart[i].seller[0]._id, cart[i].price));
+          await sleep(2000);
+          setTimeout(deleteItem(cart[i]._id));
+          await sleep(2000);
         }
         console.log(account.inventory);
-        updateUser(
-          account._id,
-          account.email,
-          account.username,
-          account.password,
-          account.picture,
-          parseFloat(account.balance).toFixed(2),
-          account.inventory
+        setTimeout(
+          updateUser(
+            account._id,
+            account.email,
+            account.username,
+            account.password,
+            account.picture,
+            parseFloat(account.balance).toFixed(2),
+            account.inventory
+          ),
+          2000
         );
+        loading.modal("hide");
         sessionStorage.setItem("Account", JSON.stringify(account));
         successmodal.modal("show");
         successmodal.on("hidden.bs.modal", function () {
-          window.location.reload();
+          window.location.href = "../templates/marketplace.html";
         });
       } else {
         failedmodal.modal("show");
@@ -97,6 +110,9 @@ $("document").ready(function () {
       },
       processData: false,
       data: JSON.stringify(jsondata),
+      beforeSend: function () {
+        loading.modal("show");
+      },
     };
 
     $.ajax(settings).done(function (response) {
@@ -105,7 +121,7 @@ $("document").ready(function () {
     });
   }
 
-  function getSeller(id, profits) {
+  async function getSeller(id, profits) {
     var settings = {
       async: true,
       crossDomain: true,
@@ -116,24 +132,25 @@ $("document").ready(function () {
         "x-apikey": apikey,
         "cache-control": "no-cache",
       },
+      beforeSend: function () {
+        loading.modal("show");
+      },
     };
 
-    $.ajax(settings).done(function (response) {
+    $.ajax(settings).done(async function (response) {
       console.log(response);
       for (var i = 0; i < response.length; i++) {
         if (response[i]._id == id) {
           let newbalance = (response[i].balance += profits);
-          setTimeout(
-            updateUser(
-              response[i]._id,
-              response[i].email,
-              response[i].username,
-              response[i].password,
-              response[i].picture,
-              newbalance,
-              response[i].inventory
-            ),
-            2000
+          await sleep(2000);
+          updateUser(
+            response[i]._id,
+            response[i].email,
+            response[i].username,
+            response[i].password,
+            response[i].picture,
+            newbalance,
+            response[i].inventory
           );
         }
       }
@@ -151,10 +168,14 @@ $("document").ready(function () {
         "x-apikey": apikey,
         "cache-control": "no-cache",
       },
+      beforeSend: function () {
+        loading.modal("show");
+      },
     };
 
-    $.ajax(settings).done(function (response) {
+    $.ajax(settings).done(async function (response) {
       console.log(response);
+      await sleep(2000);
     });
   }
 
@@ -195,5 +216,9 @@ $("document").ready(function () {
       $("#buy_items").prop("disabled", true);
       $("#cart_listings").html("<p>No items in cart</p>");
     }
+  }
+
+  function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 });
