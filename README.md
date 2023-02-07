@@ -40,20 +40,21 @@ Github pages: https://t-junq.github.io/Assignment-2/
   - Filtering for specific categories
   - Sorting of listings
 - Cart page
-
+- Cart functionality
+  - Buying item functionality
+- Account Balance
+  - Adding money to balance
+  
 ### To Add:
 
 - Front Page to advertise service
-- Cart functionality
-  - Buying item functionality
 - User's Profile page
   - Inventory of items
   - Transactions and listings
 - Configure profile page
   - Change profile details
 - Listing of items page
-- Account Balance
-  - Adding money to balance
+
 
 ## Library
 
