@@ -2,8 +2,10 @@ $("document").ready(function () {
   $("#includehtml").load("header.html");
   let apikey = "63b648a1969f06502871aa39";
   let modal = $("#addedtocart");
+  let cart = JSON.parse(localStorage.getItem("cart"));
   getListings();
   var allListings = JSON.parse(sessionStorage.getItem("listings"));
+
   $("#game_filter").change(function () {
     filter();
   });
@@ -49,25 +51,30 @@ $("document").ready(function () {
   });
 
   $("#mp_listings").on("click", ".addtocart", function (e) {
+    var allListings = JSON.parse(sessionStorage.getItem("listings"));
     let id = $(this).parent().attr("id");
     let modalbody = modal.find(".modal-body");
+    console.log(allListings);
     for (var i = 0; i < allListings.length; i++) {
       if (allListings[i]._id == id) {
         listing = allListings[i];
       }
     }
     if (localStorage.getItem("cart") == null) {
-      localStorage.setItem("cart", [listing]);
+      let array = [listing];
+      localStorage.setItem("cart", JSON.stringify(array));
     } else {
-      let cartitems = localStorage.getItem("cart");
+      console.log(localStorage.getItem("cart"));
+      let cartitems = JSON.parse(localStorage.getItem("cart"));
       cartitems.push(listing);
-      localStorage.setItem("cart", listing);
+      localStorage.setItem("cart", JSON.stringify(cartitems));
     }
     console.log(localStorage.getItem("cart"));
     modalbody.html(
-      `Item Name: ${listing.name}<br>Item Price: ${listing.price}`
+      `Item Name: ${listing.name}<br>Item Price: $ ${listing.price}`
     );
     modal.modal("show");
+    $(this).parent().hide();
   });
 
   function filter() {
@@ -96,7 +103,6 @@ $("document").ready(function () {
   }
 
   function getListings() {
-    var myResponse;
     var settings = {
       async: true,
       crossDomain: true,
@@ -136,6 +142,23 @@ $("document").ready(function () {
         </div>`;
       }
       $("#mp_listings").html(content);
+      let buyer = JSON.parse(sessionStorage.getItem("Account")).username;
+
+      $(".listing").each(function () {
+        let seller = $(this).children("div.seller").text().trim();
+
+        if (cart != null) {
+          for (var i = 0; i < cart.length; i++) {
+            if (cart[i]._id == $(this).attr("id")) {
+              $(this).hide();
+            }
+          }
+        }
+        if (seller == buyer) {
+          console.log(seller);
+          $(this).hide();
+        }
+      });
     });
   }
 });

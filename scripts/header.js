@@ -4,7 +4,7 @@ $(document).ready(function ($) {
   console.log(account);
   console.log(account.username);
   $("#nav_username").text(account.username);
-  $("#nav_balance p").text(`$ ${account.balance}`);
+  $("#nav_balance p").text(`$ ${parseFloat(account.balance).toFixed(2)}`);
   console.log(account.picture);
   if (account.picture != null) {
     $("#nav_profilepic").attr("src", account.picture);
