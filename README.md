@@ -58,9 +58,14 @@ Github pages: https://t-junq.github.io/Assignment-2/
 
 ## Library
 
-https://smtpjs.com/ - Send Email
+Jquery
+jquery.com
 
-https://fontawesome.com/ - Icons for html
+Bootstrap - Used for modals and forms
+https://getbootstrap.com/
+
+Font Awesome - Icons for html
+https://fontawesome.com/ 
 
 ## Refrences
 
