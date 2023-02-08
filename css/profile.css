@@ -69,14 +69,38 @@ body {
     border-radius: 10px;
     overflow-y:auto;
     display: flex;
-    gap:50px;
+    gap:30px;
     justify-content: start;
     padding: 10px;
     padding-left: 70px;
+    padding-right: 70px;
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     z-index: 1;
+}
+
+div::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+  
+div::-webkit-scrollbar {
+width: 8px;
+background-color: none;
+}
+  
+div::-webkit-scrollbar-thumb {
+border-radius: 10px;
+background-color:darkblue;
+}
+
+#inventory p{
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .item{
@@ -90,13 +114,14 @@ body {
     padding: 0.4%;
 }
 
-.item_name,.item_price{
+.item_name{
     font-size:18px;
     color: white;
 }
 
+
 .item_price{
-    font-size:19px;
+    font-size:15px;
     margin: 10px;
 }
 
@@ -111,7 +136,8 @@ body {
     position: relative;
     background: none;
     border: none;
-    top:30%;
+    top:5%;
+    filter: drop-shadow(5px 8px 0 rgba(7, 12, 16, 0.15));;
 }
 
 .img_container{
@@ -123,3 +149,60 @@ body {
 }
 
 
+.btn{
+    border:1px solid black;
+}
+
+.btn:hover{
+    animation-duration: 0.5s;
+    animation-direction:normal;
+    box-shadow: 3px 4px 4px cornflowerblue;
+    filter: brightness(200%);
+}
+
+
+
+.modal-body{
+    background-color: #452470;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-footer{
+    border-top:#23003A 2px solid;
+    background-color: #452470;
+}
+
+.modal-content{
+    background-color: #452470;
+}
+
+.modal-header{
+    border-bottom:#23003A 2px solid;
+    background-color: #452470;
+}
+
+#listingheader{
+    text-align: center;
+}
+
+.col-1{
+    background-color: #452470;
+    margin-left: 41%;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.col-6{
+    background-color: #452470;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#list_form{
+    background-color: #452470;
+}

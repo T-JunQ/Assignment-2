@@ -5,13 +5,14 @@ $("document").ready(function () {
   let total = 0;
   let account = JSON.parse(sessionStorage.getItem("Account"));
   let failedmodal = $("#failedbuy");
-  let successmodal = $("#sucessbuy");
+  let successmodal = $("#sucess");
   let loading = $("#loading");
 
   showItems();
 
   if (account == null) {
     $("#cart_listings").html("<p>Please Log in to buy items</p>");
+    $("#buy_items").prop("disabled", true);
   }
 
   $("#buy_items").click(function () {
@@ -48,32 +49,30 @@ $("document").ready(function () {
       if (account.balance - total >= 0) {
         account.balance = parseFloat(account.balance);
         account.balance -= total;
+        account.balance = account.balance.toFixed(2);
         for (var i = 0; i < cart.length; i++) {
           loading.modal("show");
           account.inventory.items.push(cart[i]);
-          setTimeout(getSeller(cart[i].seller[0]._id, cart[i].price));
+          deleteItem(cart[i]._id);
           await sleep(2000);
-          setTimeout(deleteItem(cart[i]._id));
+          getSeller(cart[i].seller[0]._id, cart[i].price);
           await sleep(2000);
         }
         console.log(account.inventory);
-        setTimeout(
-          updateUser(
-            account._id,
-            account.email,
-            account.username,
-            account.password,
-            account.picture,
-            parseFloat(account.balance).toFixed(2),
-            account.inventory
-          ),
-          2000
+        updateUser(
+          account._id,
+          account.email,
+          account.username,
+          account.password,
+          account.picture,
+          account.balance,
+          account.inventory
         );
-        loading.modal("hide");
+        await sleep(2000);
         sessionStorage.setItem("Account", JSON.stringify(account));
         successmodal.modal("show");
-        successmodal.on("hidden.bs.modal", function () {
-          window.location.href = "../templates/marketplace.html";
+        $("#sucess").on("hidden.bs.modal", function () {
+          window.location.reload();
         });
       } else {
         failedmodal.modal("show");
@@ -90,6 +89,7 @@ $("document").ready(function () {
     balance,
     inventory
   ) {
+    balance = balance;
     var jsondata = {
       email: email,
       username: username,
@@ -118,6 +118,7 @@ $("document").ready(function () {
     $.ajax(settings).done(function (response) {
       console.log(response);
       localStorage.removeItem("cart");
+      loading.modal("hide");
     });
   }
 
@@ -141,7 +142,10 @@ $("document").ready(function () {
       console.log(response);
       for (var i = 0; i < response.length; i++) {
         if (response[i]._id == id) {
-          let newbalance = (response[i].balance += profits);
+          let newbalance = parseFloat(response[i].balance);
+          profits = parseFloat(profits);
+          newbalance = response[i].balance += profits;
+          newbalance = parseFloat(newbalance).toFixed(2);
           await sleep(2000);
           updateUser(
             response[i]._id,
@@ -171,11 +175,13 @@ $("document").ready(function () {
       beforeSend: function () {
         loading.modal("show");
       },
+      error: function () {
+        alert("One of the items you are trying to buy is already bought\n");
+      },
     };
 
     $.ajax(settings).done(async function (response) {
       console.log(response);
-      await sleep(2000);
     });
   }
 

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/editprofile.css">
+  </head>
+  <body>
+    <header>
+      <div id="includehtml"></div>
+    </header>
+
+    <div id="edit_window">
+      <button onclick="history.back()" id="back"><i class="fa-solid fa-arrow-left"></i></button>
+        <h3>Edit Profile</h3>
+        <form class="form-horizontal" style="margin-left:14%; color:white;" id="edit_form">
+            <div class="form-group row">
+              <label class="control-label col-sm-5" for="email">Email:</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" placeholder="Enter email" disabled>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="control-label col-sm-5" for="user" >Username:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="user" placeholder="Username" minlength="5" maxlength="20" required>
+              </div>
+            </div>
+            <img id="profile_pic" src="../pics/vecteezy_profile-icon-design-vector_5544718.jpg" alt=""
+           onerror="src='../pics/vecteezy_profile-icon-design-vector_5544718.jpg'"  width="100px" height="100px" style="margin-top: 10px;margin-left: 30px;">
+            <div class="form-group row">
+                <label class="control-label col-sm-5" for="picture" >Picture (Use URL)</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="picture" placeholder="Picture">
+                </div>
+              </div>
+            <div class="form-group row">
+              <label class="control-label col-sm-5" for="pwd" >Change Password:</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="pwd" placeholder="Password" minlength="5" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="control-label col-sm-5" for="pwd2">Current Password:</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="pwd2" placeholder="Current Password" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-1 col-sm-10" id="submit">
+                <button type="submit" class="btn btn-primary">Update</button>
+              </div>
+            </div>
+          </form>
+        </form>
+    </div>
+
+    <div class="modal fade" id="sucesschange" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" style="color:black">Update Sucessful!</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_o3kwwgtn.json"  background="transparent"  speed="0.5"  style="width: 80px; height: 80px;"    autoplay></lottie-player>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/7f958d91e0.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../scripts/editprofile.js"></script>
+  </body>
+</html>

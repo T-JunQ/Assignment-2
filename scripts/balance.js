@@ -85,6 +85,9 @@ $(document).ready(function () {
       },
       processData: false,
       data: JSON.stringify(jsondata),
+      beforeSend: function () {
+        $("#submit").prop("disabled", true);
+      },
     };
 
     $.ajax(settings).done(function (response) {

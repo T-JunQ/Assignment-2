@@ -68,6 +68,7 @@ body {
     justify-content: start;
     padding: 10px;
     padding-left: 50px;
+    padding-right: 50px;
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
@@ -128,6 +129,7 @@ div::-webkit-scrollbar-track {
     background: none;
     border: none;
     top:8%;
+    filter: drop-shadow(5px 8px 0 rgba(7, 12, 16, 0.15));;
 }
 
 .img_container{

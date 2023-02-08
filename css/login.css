@@ -6,7 +6,8 @@ html,body{
 }
 
 #background{
-    background-image: url("../pics/Background.jpg");
+    background:url(../pics/background.gif);
+    background-repeat: no-repeat;
     background-size: cover;
     left: 0;
     width:100%;
@@ -36,7 +37,7 @@ h1{
 
 .btn{
     color: white;
-    background-color:cornflowerblue;
+    background-color:dodgerblue;
 }
 
 .btn:hover{
