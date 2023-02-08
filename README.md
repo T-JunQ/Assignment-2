@@ -81,6 +81,8 @@ https://pngtree.com/freepng/hand-drawn-cartoon-cyber-security-infographic_505333
 
 https://www.pngfind.com/mpng/hmwRhhw_csgo-skins-transparent-hd-png-download/
 
+https://tenor.com/view/background-gif-26550124
+
 ### Aknowledgement
 
 Logo made using https://logo.com/
