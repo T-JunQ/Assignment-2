@@ -44,22 +44,22 @@ Github pages: https://t-junq.github.io/Assignment-2/
   - Buying item functionality
 - Account Balance
   - Adding money to balance
+- User's Profile page
+  - Inventory of items
+- Configure profile page
+  - Change profile details
   
 ### To Add:
 
 - Front Page to advertise service
-- User's Profile page
-  - Inventory of items
-  - Transactions and listings
-- Configure profile page
-  - Change profile details
+- Transactions and listings
 - Listing of items page
 
 
 ## Library
 
-Jquery
-jquery.com
+Jquery - AJAX and easier js coding
+https://jquery.com
 
 Bootstrap - Used for modals and forms
 https://getbootstrap.com/
