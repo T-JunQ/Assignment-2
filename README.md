@@ -58,9 +58,14 @@ Github pages: https://t-junq.github.io/Assignment-2/
 
 ## Library
 
-https://smtpjs.com/ - Send Email
+Jquery
+jquery.com
 
-https://fontawesome.com/ - Icons for html
+Bootstrap - Used for modals and forms
+https://getbootstrap.com/
+
+Font Awesome - Icons for html
+https://fontawesome.com/ 
 
 ## Refrences
 
@@ -75,6 +80,8 @@ https://www.kindpng.com/downpng/himbwmx_5-star-customer-feedback-trustpilot-logo
 https://pngtree.com/freepng/hand-drawn-cartoon-cyber-security-infographic_5053337.html
 
 https://www.pngfind.com/mpng/hmwRhhw_csgo-skins-transparent-hd-png-download/
+
+https://tenor.com/view/background-gif-26550124
 
 ### Aknowledgement
 
