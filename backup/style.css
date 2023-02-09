@@ -54,13 +54,7 @@ nav img{
     height: 1080px;
 }
 
-h1{
-    color: azure;
-    font-size: 70px;
-    font-family: fantasy;
-    text-shadow: #23003A 10px;
 
-}
 
 #header{
     font-size: 30px;
@@ -77,8 +71,7 @@ h1{
     background-color: #005DAD;
     border-radius: 15px;
     width: 500px;
-    margin: 100px;
-    padding-left: 20px;
+    margin: 36px;
     
 }
 
@@ -89,56 +82,5 @@ h1{
     -ms-transform: rotate(65deg); 
     transform: rotate(65deg);
     
-
-}
-
-
-#last{
-    background-image: url(./pics/3187.jpg);
-    
-    height: 800px;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 150px;
-
-}
-
-
-#last_blue_border{
-    
-    background-color: #005DAD;
-    border-radius: 50px;
-    width: 500px;
-    height: 170px;
-    margin-left: 450px;
-    padding-top: 15px;
-    padding-left: 25px;
-    padding-bottom: 15px;
-  
-}
-h2{
-    font-size: 25px;
-    color: azure;
-    align-content: center;
-}
-
-
-#tax{
-    margin-top: 200px;
-    background-image: url('./pics/taxbrg.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    height: 1400px;
-   
-}
-
-
-#safety{
-    background-image: url('./pics/taxbrg.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    
-    height: 400px;
 
 }

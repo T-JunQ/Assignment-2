@@ -4,7 +4,6 @@ $("document").ready(function () {
   let modal = $("#addedtocart");
   let cart = JSON.parse(localStorage.getItem("cart"));
   getListings();
-  var allListings = JSON.parse(sessionStorage.getItem("listings"));
 
   $("#game_filter").change(function () {
     filter();

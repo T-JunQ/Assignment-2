@@ -16,6 +16,7 @@ $(document).ready(function () {
     loadInventory();
     $("#username").text(account.username);
     $("#profile_pic").attr("src", account.picture);
+    $("#email").text(account.email);
   }
 
   console.log(localStorage);
@@ -50,17 +51,40 @@ $(document).ready(function () {
     e.preventDefault();
     let id = item.attr("id");
     let inventory = account.inventory.items;
-    for (var i = 0; i < inventory.length; i++) {
-      if (id == inventory[i]._id) {
-        item = inventory[i];
+    let price = $("#price").val();
+    if ($.isNumeric(price) == true) {
+      price = parseFloat(price).toFixed(2);
+      for (var i = 0; i < inventory.length; i++) {
+        if (id == inventory[i]._id) {
+          item = inventory[i];
+          item.price = price;
+          inventory.splice(i, 1);
+          console.log(inventory);
+          break;
+        }
       }
+      console.log(item);
+      postListing(item.name, item.game, item.image, price, account);
+      if (localStorage.getItem("history") != null) {
+      }
+      await sleep(2000);
+      account.inventory.items = inventory;
+      updateInventory(
+        account._id,
+        account.email,
+        account.username,
+        account.password,
+        account.picture,
+        parseFloat(account.balance).toFixed(2),
+        account.inventory
+      );
+    } else {
+      $("#price_small").css("color", "red");
+      $("#price_small").text("Please write a valid amount");
     }
-    console.log(item);
-    postListing(item.name, item.game, item.image, item.price, account);
-    await sleep(2000);
-    getItem();
   });
 
+  // Creates a new record in listing
   function postListing(name, game, image, price, seller) {
     var jsondata = {
       name: name,
@@ -82,6 +106,11 @@ $(document).ready(function () {
       },
       processData: false,
       data: JSON.stringify(jsondata),
+      beforeSend: function () {
+        $(
+          "#submit"
+        )[0].outerHTML = `<lottie-player src="https://assets6.lottiefiles.com/packages/lf20_kxsd2ytq.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;margin-left:auto;margin-right:auto;align-self:center;"  loop  autoplay id="spinner"></lottie-player>`;
+      },
     };
 
     $.ajax(settings).done(function (response) {
@@ -89,6 +118,46 @@ $(document).ready(function () {
     });
   }
 
+  // Changes record in database to reflect the item moving to listing
+  function updateInventory(id, email, name, pwd, picture, balance, inventory) {
+    var jsondata = {
+      email: email,
+      username: name,
+      password: pwd,
+      picture: picture,
+      balance: balance,
+      inventory: inventory,
+    };
+    var settings = {
+      async: true,
+      crossDomain: true,
+      url: `https://interactivedev-f58c.restdb.io/rest/accounts/${id}`,
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+        "x-apikey": apikey,
+        "cache-control": "no-cache",
+      },
+      processData: false,
+      data: JSON.stringify(jsondata),
+    };
+
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+      let modalbody = listingmodal.find(".modal-body");
+      sessionStorage.setItem("Account", JSON.stringify(response));
+      modalbody.html(
+        `<h3>Item Listed! </h3><br><h5>Item: ${item.name}</h5><h5>Price: ${item.price}</h5>`
+      );
+      $("#list_form").hide();
+      $("#spinner").hide();
+      $("#list_items").on("hidden.bs.modal", function () {
+        window.location.reload();
+      });
+    });
+  }
+
+  // Loads inventory from sessionStorage
   function loadInventory() {
     let inventory = account.inventory.items;
     if (inventory.length == 0) {
@@ -115,6 +184,7 @@ $(document).ready(function () {
     }
   }
 
+  // Delays ajax request due to rest db limitations
   function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }

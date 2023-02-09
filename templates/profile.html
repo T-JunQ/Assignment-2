@@ -18,9 +18,10 @@
         <img id="profile_pic" src="../pics/vecteezy_profile-icon-design-vector_5544718.jpg" alt=""
            onerror="src='../pics/vecteezy_profile-icon-design-vector_5544718.jpg'">
         <h4 id="username">Login/Signup</h4>
-        <button class="btn btn-primary btn-lg" id="edit_profile">Edit profile</button>
-        <button class="btn btn-primary btn-lg" id="login" style="margin-top: 30px;">Log in / Sign up</button>
-        <button class="btn btn-danger btn-lg" id="logout">Log-Out</button>
+        <h7 id="email">Email</h7>
+        <button class="btn btn-primary btn-lg" id="edit_profile" >Edit profile</button>
+        <button class="btn btn-primary btn-lg" id="login" style="margin-top: 5px;">Log in / Sign up</button>
+        <button class="btn btn-danger btn-sm" id="logout">Log-Out</button>
       </div>
       <div id="inventory">
         <div class="item">
@@ -54,8 +55,8 @@
           </div>
           <form id="list_form" style="background-color: #452470;">
           <div class="col-6" style="background-color: #452470;margin-top: 20px;margin-left: auto;margin-right: auto;">
-            <input type="number" class="form-control" id="price"  maxlength="4" placeholder="Price" style="margin-top: -10px;" required>
-            <small for="amount">Note: The maximum price is <strong>$ 9999</strong></small>
+            <input type="text" class="form-control" id="price" placeholder="Price" style="margin-top: -10px;" required>
+            <small id="price_small">Write a valid price</small>
           </div>
         <div class="col-1" >
           <button type="submit" class="btn btn-primary" id="submit">Confirm</button>

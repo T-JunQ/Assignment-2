@@ -30,11 +30,12 @@ Wireframe: https://xd.adobe.com/view/bf3381a1-7660-4c55-b8a4-dbb784ff1f82-ea60/
 Github pages: https://t-junq.github.io/Assignment-2/
 
 ## Features
+
 ### Implemented:
 
 - Login page and functionality
 - Navigation bar
-- Marketplace page 
+- Marketplace page
 - Marketplace functionality
   - Search for item names
   - Filtering for specific categories
@@ -48,13 +49,12 @@ Github pages: https://t-junq.github.io/Assignment-2/
   - Inventory of items
 - Configure profile page
   - Change profile details
-  
+
 ### To Add:
 
 - Front Page to advertise service
 - Transactions and listings
 - Listing of items page
-
 
 ## Library
 
@@ -65,11 +65,13 @@ Bootstrap - Used for modals and forms
 https://getbootstrap.com/
 
 Font Awesome - Icons for html
-https://fontawesome.com/ 
+https://fontawesome.com/
 
 ## Refrences
 
 ### Media
+
+- Homepage
 
 https://www.vecteezy.com/vector-art/3987132-modern-abstract-light-dynamic-stripe-gradient-purple-background-can-be-used-as-banner-frame-website-or-presentation
 
@@ -81,7 +83,17 @@ https://pngtree.com/freepng/hand-drawn-cartoon-cyber-security-infographic_505333
 
 https://www.pngfind.com/mpng/hmwRhhw_csgo-skins-transparent-hd-png-download/
 
+- Login
+
 https://tenor.com/view/background-gif-26550124
+
+- Items
+
+Websites:
+
+https://csgostash.com
+
+https://skin-tracker.com/valorant
 
 ### Aknowledgement
 

@@ -5,7 +5,8 @@ body {
     margin: 0;
     padding: 0;
     top: 0;
-    background-color: #452470;
+    background: url(../pics/vecteezy_modern-abstract-light-dynamic-stripe-gradient-purple_3987132.jpg);
+    
     width: 100%;
     height: 100%;
     color: aliceblue;
@@ -52,12 +53,27 @@ h1{
 
 
 #submit{
+    position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
     border: 1px black solid;
 }
 
 .form-control,.form-select{
     border: 1px black solid;
+}
+
+@media (max-width:430px) {
+    #bal_window{
+        position: relative;
+        background-color: #044a87;
+        top:-2%;
+        width: 90%;
+        height:80%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius:10px;
+        border: 1px solid black;
+        padding: 10px 50px;
+    }
 }
