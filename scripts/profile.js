@@ -8,7 +8,7 @@ $(document).ready(function () {
   $("#login").hide();
   if (account == null) {
     $("#inventory").html(`<p>Please log in to see your inventory</p>`);
-    $(".btn").prop("disabled", true);
+    $("#edit_profile").prop("disabled", true);
     $("#login").show();
     $("#logout").hide();
   } else {

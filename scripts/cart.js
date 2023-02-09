@@ -7,6 +7,8 @@ $("document").ready(function () {
   let failedmodal = $("#failedbuy");
   let successmodal = $("#sucess");
   let loading = $("#loading");
+  let usepoints = 0;
+  showPoints();
 
   showItems();
 
@@ -14,6 +16,17 @@ $("document").ready(function () {
     $("#cart_listings").html("<p>Please Log in to buy items</p>");
     $("#buy_items").prop("disabled", true);
   }
+
+  $("#points_select").change(function () {
+    usepoints = parseInt($(this).val());
+    $("#cart_info").html(
+      `<p>Subtotal: $ ${total.toFixed(
+        2
+      )} </p><p>Discount: $ ${usepoints.toFixed(2)} </p><p>Total: $ ${(
+        total - usepoints
+      ).toFixed(2)}</p>`
+    );
+  });
 
   $("#buy_items").click(function () {
     buyItems();
@@ -47,6 +60,10 @@ $("document").ready(function () {
     let checkout = confirm("Are you sure you want to check-out?");
     if (checkout == true) {
       if (account.balance - total >= 0) {
+        let points = parseInt(localStorage.getItem("points"));
+        total -= usepoints;
+        points -= usepoints;
+        points += total / 10;
         account.balance = parseFloat(account.balance);
         account.balance -= total;
         account.balance = account.balance.toFixed(2);
@@ -70,6 +87,7 @@ $("document").ready(function () {
         );
         await sleep(2000);
         sessionStorage.setItem("Account", JSON.stringify(account));
+        localStorage.setItem("points", points);
         successmodal.modal("show");
         $("#sucess").on("hidden.bs.modal", function () {
           window.location.reload();
@@ -216,7 +234,9 @@ $("document").ready(function () {
       $("#cart_info").html(
         `<p>Subtotal: $ ${total.toFixed(
           2
-        )} </p><p>Discount: $ 0 </p><p>Total: $ ${total.toFixed(2)}</p>`
+        )} </p><p>Discount: $ ${usepoints} </p><p>Total: $ ${total.toFixed(
+          2
+        )}</p>`
       );
     } else {
       $("#buy_items").prop("disabled", true);
@@ -224,6 +244,24 @@ $("document").ready(function () {
     }
   }
 
+  function showPoints() {
+    if (localStorage.getItem("points") == null) {
+      localStorage.setItem("points", 0);
+    }
+    let points = parseInt(localStorage.getItem("points"));
+    $("#show_points").text(`Points: ${points}`);
+    $("#points_select > option").each(function () {
+      let value = parseInt($(this).val());
+      console.log(value);
+      console.log(points >= value);
+      if (points <= value && total - points <= 0) {
+        console.log(value);
+        $(this).attr("disabled", true);
+      }
+    });
+  }
+
+  // SUed to delay AJAX requests due to restdb limitations
   function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }

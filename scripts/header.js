@@ -19,13 +19,13 @@ $(document).ready(function ($) {
     }
   });
 
-  $("#nav_profile").click(function () {
-    console.log("he");
-    window.location.href = "profile.html";
-  });
   if (account != null) {
     $("#nav_username").text(account.username);
     $("#nav_balance p").text(`$ ${parseFloat(account.balance).toFixed(2)}`);
+    $("#nav_profile").click(function () {
+      console.log("he");
+      window.location.href = "profile.html";
+    });
     console.log(account.picture);
     if (account.picture != null) {
       $("#nav_profilepic").attr("src", account.picture);

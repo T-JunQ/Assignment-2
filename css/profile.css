@@ -46,6 +46,9 @@ body {
 #username{
     margin-top: 3%;
     font-weight: 700;
+    border: white 1px solid;
+    border-radius: 10px;
+    padding-bottom: 6px;
 }
 
 #email{
@@ -109,7 +112,7 @@ background-color: none;
   
 div::-webkit-scrollbar-thumb {
 border-radius: 10px;
-background-color:darkcyan;
+background-color:darkblue;
 }
 
 #inventory p{
@@ -117,11 +120,13 @@ background-color:darkcyan;
     margin-right: auto;
 }
 
+
+
+/* inventory items */
 .item{
     height:350px;
     width:240px;
     background-color:#23003A;
-    border:black 2px solid;
     border-radius: 10px;
     color: aliceblue;
     text-align: center;

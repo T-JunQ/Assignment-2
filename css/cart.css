@@ -9,7 +9,6 @@ body {
     width: 100%;
     height: 100%;
     color: aliceblue;
-    overflow: hidden;
 }
 
 h1{
@@ -107,6 +106,20 @@ h1{
     width: 70px;
 }
 
+#points_select{
+    position: absolute;
+    left: 0;
+    right:0;
+    top:9%;
+    padding: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: #23003A 1px solid;
+    margin-left: auto;
+    margin-right: 15px;
+    width: 10%
+}
+
 @media (max-width:430px) {
     #buy_items,#delete_items{
         position: absolute;
@@ -116,6 +129,14 @@ h1{
     #cart_info{
         margin-left: 10px;
         top:10px;
+        line-height: 3px;
+        font-size: 10px;
+    }
+    #points_select{
+        top:63%;
+        margin-right: 25%;
+        width: 10px;
+        height:20px;
     }
 }
 

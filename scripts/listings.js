@@ -25,7 +25,6 @@ $("document").ready(function () {
     $.ajax(settings).done(function (response) {
       sessionStorage.setItem("listings", JSON.stringify(response));
       let content = "";
-
       for (var i = 0; i < response.length; i++) {
         if (response[i].seller[0]._id == account._id) {
           var price = parseFloat(response[i].price).toFixed(2);

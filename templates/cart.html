@@ -28,7 +28,6 @@
           <h4 class="seller_name">d</h4>
       </div>
       </div> -->
-
     </div>
     <div id="cart_footer">
       <div id="cart_info">
@@ -36,8 +35,18 @@
         <p>Discount: </p>
         <p>Total: </p>
       </div>
+      <select class="form-select" id="points_select">
+        <option id="show_points" disabled selected>No of points</option>
+        <option value="0">Don't Use</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+        <option value="50">50</option>
+      </select>
       <button class="btn btn-primary" id="buy_items">Check-Out</button><br>
       <button class="btn btn-danger" id="delete_items">Clear All</button><br>
+      
     </div>
 
     <div class="modal fade" id="failedbuy" tabindex="-1">
