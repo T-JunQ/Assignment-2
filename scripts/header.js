@@ -1,20 +1,6 @@
 $(document).ready(function ($) {
   var url = window.location.href;
   let account = JSON.parse(sessionStorage.getItem("Account"));
-  console.log(account);
-  console.log(account.username);
-  $("#nav_username").text(account.username);
-  $("#nav_balance p").text(`$ ${account.balance}`);
-  console.log(account.picture);
-  if (account.picture != null) {
-    $("#nav_profilepic").attr("src", account.picture);
-  } else {
-    $("#nav_profilepic").attr(
-      "src",
-      "../pics/vecteezy_profile-icon-design-vector_5544718.jpg"
-    );
-  }
-
   $("#nav_buttons a").each(function () {
     console.log(url);
     var linkPage = this.href;
@@ -34,6 +20,24 @@ $(document).ready(function ($) {
   });
 
   $("#nav_profile").click(function () {
-    window.location.href = "";
+    console.log("he");
+    window.location.href = "profile.html";
   });
+  if (account != null) {
+    $("#nav_username").text(account.username);
+    $("#nav_balance p").text(`$ ${parseFloat(account.balance).toFixed(2)}`);
+    console.log(account.picture);
+    if (account.picture != null) {
+      $("#nav_profilepic").attr("src", account.picture);
+    } else {
+      $("#nav_profilepic").attr(
+        "src",
+        "../pics/vecteezy_profile-icon-design-vector_5544718.jpg"
+      );
+    }
+  } else {
+    $("#nav_add").click(function (e) {
+      e.preventDefault();
+    });
+  }
 });

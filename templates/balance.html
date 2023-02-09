@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Top-Up balance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/balance.css">
+  </head>
+  <body>
+    <h1>Transaction</h1>
+    <div id="bal_window">
+        <button onclick="history.back()" id="back"><i class="fa-solid fa-arrow-left"></i></button>
+        <h5>Card Details</h5>
+        <form class="row g-3" id="bal_form">
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="card_no" minlength="16" maxlength="19" placeholder="Card Number *" required>
+            </div>
+            <div class="col-md-3">
+              <input type="password" class="form-control" id="csv" minlength="3" maxlength="3" placeholder="CSV *" required>
+            </div>
+            <div class="col-12">
+              <input type="text" class="form-control" id="address" placeholder="Billing Address *" required>
+            </div>
+            <div class="col-12">
+              <input type="text" class="form-control" id="alt_address" placeholder="Billing Address 2 (optional)">
+            </div>
+            <div class="col-md-5">
+              <input type="text" class="form-control" id="city" placeholder="City *" required>
+            </div>
+            <div class="col-md-4">
+              <select id="state" class="form-select" required>
+                <option selected disabled>State *</option>
+                <option data-state="Singapore">Singapore</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <input type="text" class="form-control" id="zip" minlength="5" maxlength="6" placeholder="ZIP *" required>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="save_details">
+                  <label class="form-check-label" for="save_details">
+                    Save details for next time payments
+                  </label>
+                </div>
+              </div>
+            <h6>Amount to top-up</h6>
+            <div class="col-md-6">
+                <input type="number" class="form-control" id="amount"  maxlength="4" placeholder="Amount *" style="margin-top: -10px;" required>
+            </div>
+            <small for="amount">Note: The maximum top-up amount is <strong>$ 9999</strong></small>
+            <div class="col-5">
+              <button type="submit" class="btn btn-primary" id="submit">Confirm</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal fade" id="sucessful" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" style="color:black">Sucessfully top-up</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_oosm9mdk.json"  background="transparent"  speed="1"  style="width: 80px; height: 80px;"  loop  autoplay></lottie-player>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://kit.fontawesome.com/7f958d91e0.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../scripts/balance.js"></script>
+  </body>
+</html>

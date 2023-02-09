@@ -40,26 +40,32 @@ Github pages: https://t-junq.github.io/Assignment-2/
   - Filtering for specific categories
   - Sorting of listings
 - Cart page
-
+- Cart functionality
+  - Buying item functionality
+- Account Balance
+  - Adding money to balance
+- User's Profile page
+  - Inventory of items
+- Configure profile page
+  - Change profile details
+  
 ### To Add:
 
 - Front Page to advertise service
-- Cart functionality
-  - Buying item functionality
-- User's Profile page
-  - Inventory of items
-  - Transactions and listings
-- Configure profile page
-  - Change profile details
+- Transactions and listings
 - Listing of items page
-- Account Balance
-  - Adding money to balance
+
 
 ## Library
 
-https://smtpjs.com/ - Send Email
+Jquery - AJAX and easier js coding
+https://jquery.com
 
-https://fontawesome.com/ - Icons for html
+Bootstrap - Used for modals and forms
+https://getbootstrap.com/
+
+Font Awesome - Icons for html
+https://fontawesome.com/ 
 
 ## Refrences
 
@@ -74,6 +80,8 @@ https://www.kindpng.com/downpng/himbwmx_5-star-customer-feedback-trustpilot-logo
 https://pngtree.com/freepng/hand-drawn-cartoon-cyber-security-infographic_5053337.html
 
 https://www.pngfind.com/mpng/hmwRhhw_csgo-skins-transparent-hd-png-download/
+
+https://tenor.com/view/background-gif-26550124
 
 ### Aknowledgement
 
