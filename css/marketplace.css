@@ -99,7 +99,6 @@ div::-webkit-scrollbar-track {
     height:380px;
     width:240px;
     background-color:#23003A;
-    border:black 2px solid;
     border-radius: 10px;
     color: aliceblue;
     text-align: center;
