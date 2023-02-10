@@ -4,6 +4,7 @@ $(document).ready(function () {
   let apikey = "63b648a1969f06502871aa39";
   let successmodal = $("#sucessful");
   $("#validation").hide();
+  // If remember details is checked previously would chnage values
   if (rmb_card == "true") {
     $("#save_details").prop("checked", true);
     $("#card_no").val(localStorage.getItem("cardno"));
@@ -14,6 +15,7 @@ $(document).ready(function () {
     $("#zip").val(localStorage.getItem("zip"));
   }
 
+  // Checks if the numeric values are correct, then sends a put request to change balance
   $("#bal_form").submit(function (e) {
     e.preventDefault();
     let validation = true;
@@ -84,6 +86,7 @@ $(document).ready(function () {
     );
   });
 
+  // Updates record to reflect new balance
   function updateBalance(
     id,
     email,

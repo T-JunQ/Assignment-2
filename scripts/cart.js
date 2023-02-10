@@ -17,6 +17,7 @@ $("document").ready(function () {
     $("#buy_items").prop("disabled", true);
   }
 
+  // Changes total value if points are used
   $("#points_select").change(function () {
     usepoints = parseInt($(this).val());
     $("#cart_info").html(
@@ -32,6 +33,7 @@ $("document").ready(function () {
     buyItems();
   });
 
+  // Removes item if clicked on remove
   $("#cart_listings").on("click", ".remove_item", function (e) {
     console.log("text");
     let id = $(this).parent().attr("id");
@@ -56,6 +58,7 @@ $("document").ready(function () {
     window.location.reload();
   });
 
+  // Updates seller,buyer and points on checkout
   async function buyItems() {
     let checkout = confirm("Are you sure you want to check-out?");
     if (checkout == true) {
@@ -98,6 +101,7 @@ $("document").ready(function () {
     }
   }
 
+  // Updates user information
   function updateUser(
     id,
     email,
@@ -140,6 +144,7 @@ $("document").ready(function () {
     });
   }
 
+  // Gets seller info and add profits inside
   async function getSeller(id, profits) {
     var settings = {
       async: true,
@@ -179,6 +184,7 @@ $("document").ready(function () {
     });
   }
 
+  // Deletes item from the listings collection
   function deleteItem(id) {
     var settings = {
       async: true,
@@ -203,6 +209,7 @@ $("document").ready(function () {
     });
   }
 
+  // Shows items in cart
   function showItems() {
     if (cart != null) {
       let content = "";
@@ -244,6 +251,7 @@ $("document").ready(function () {
     }
   }
 
+  // Shows points currently
   function showPoints() {
     let id = account._id;
     if (localStorage.getItem(`${id}`) == null) {

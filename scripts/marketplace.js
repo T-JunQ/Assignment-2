@@ -42,6 +42,7 @@ $("document").ready(function () {
       .appendTo("#mp_listings");
   });
 
+  // Finds items from database by checking if each letter matches the item name
   $("#search_input").keyup(function (e) {
     let input = $("#search_input").val().toUpperCase();
     input = input.trim();
@@ -57,6 +58,7 @@ $("document").ready(function () {
     });
   });
 
+  // Adds item to localstorage cart and creates new cart object if it currently doesnt exist
   $("#mp_listings").on("click", ".addtocart", function (e) {
     var allListings = JSON.parse(sessionStorage.getItem("listings"));
     let id = $(this).parent().attr("id");
@@ -84,6 +86,7 @@ $("document").ready(function () {
     $(this).parent().hide();
   });
 
+  // Filters items using the data field from each input
   function filter() {
     let start = parseFloat($("#price_filter").find(":selected").data("start"));
     let end = parseFloat($("#price_filter").find(":selected").data("end"));
@@ -109,6 +112,7 @@ $("document").ready(function () {
     });
   }
 
+  // Gets all items from the DB, dosent include items with same seller name as buyer and already in cart
   async function getListings() {
     await sleep(2000);
     var settings = {
@@ -167,6 +171,7 @@ $("document").ready(function () {
       $("#mp_listings").html(content);
     });
   }
+  // Delay function
   function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
