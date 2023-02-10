@@ -3,6 +3,7 @@ $(document).ready(function () {
   let account = JSON.parse(sessionStorage.getItem("Account"));
   let apikey = "63b648a1969f06502871aa39";
   let successmodal = $("#sucessful");
+  $("#validation").hide();
   if (rmb_card == "true") {
     $("#save_details").prop("checked", true);
     $("#card_no").val(localStorage.getItem("cardno"));
@@ -15,13 +16,41 @@ $(document).ready(function () {
 
   $("#bal_form").submit(function (e) {
     e.preventDefault();
+    let validation = true;
+    let smalltext = $("#validation");
+    let cardno = $("#card_no").val();
+    let csv = $("#csv").val();
+    let addr = $("#address").val();
+    let addr2 = $("#address2").val();
+    let city = $("#city").val();
+    let state = $("#state").find(":selected").data("state");
+    let zip = $("#zip").val();
+    if ($.isNumeric(cardno) == false) {
+      smalltext.text("Card number is invalid!");
+      $("#card_no").css("border", "red 2px solid");
+      smalltext.show();
+      return false;
+    } else {
+      $("#card_no").css("border", "none");
+    }
+    if ($.isNumeric(csv) == false) {
+      smalltext.text("CSV is invalid!");
+      $("#csv").css("border", "red 2px solid");
+      smalltext.show();
+      return false;
+    } else {
+      $("#card_no").css("border", "none");
+    }
+    if ($.isNumeric(zip) == false) {
+      smalltext.text("Zipcode is invalid!");
+      $("#Zipcode").css("border", "red 2px solid");
+      smalltext.show();
+      return false;
+    } else {
+      $("#card_no").css("border", "none");
+    }
+
     if ($("#save_details").is(":checked")) {
-      let cardno = $("#card_no").val();
-      let addr = $("#address").val();
-      let addr2 = $("#address2").val();
-      let city = $("#city").val();
-      let state = $("#state").find(":selected").data("state");
-      let zip = $("#zip").val();
       localStorage.setItem("rmb_card", true);
       localStorage.setItem("cardno", cardno);
       localStorage.setItem("addr", addr);
