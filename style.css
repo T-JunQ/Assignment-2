@@ -11,6 +11,7 @@ body{
    
     background-image: url("pics/Background.jpg");
     background-repeat: no-repeat;
+    justify-content: center;
 }
 
 nav{
@@ -79,6 +80,11 @@ h1{
     
 }
 
+#h5{
+    padding-left: 100px;
+    color: aliceblue;
+    font-size: 12px;
+}
 #guns{
     margin-left: 700px;
     margin-top: -250px;
@@ -86,24 +92,21 @@ h1{
     transform: rotate(65deg);
 }
 
-#last{
-    background-image: url(./pics/3187.jpg);
-    
-    height: 800px;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 150px;
 
-}
+
+
+
 
 #last_blue_border{
     background-color: #005DAD;
     border-radius: 50px;
     width: 500px;
     height: 170px;
-    margin-left: 450px;
-    padding-top: 15px;
+    margin-left: 270px;
+    margin-top: 100px;
+
+    /* the padding is for the text inside the blue box*/
+    padding-top: 10px;
     padding-left: 25px;
     padding-bottom: 15px;
 }
@@ -129,5 +132,87 @@ h2{
     background-attachment: fixed;
     background-repeat: no-repeat;
     width: 100%;
-    height: 400px;
+    height: 700px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: o;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.wrapper{
+    margin: 150px auto;
+    width: 70%;
+
+
+}
+
+#safety-image{
+    max-width: 320px;
+    float: left;
+    border-color: aqua;
+    border-radius: 10px;
+    
+    margin-right: 20px;
+    padding-top: 150px;
+}
+#safety-image{
+    max-width: 320px;
+    float: right;
+    border-color: aqua;
+    border-radius: 10px;
+    
+    
+}
+
+
+
+.text-box{
+    color: aliceblue;
+}
+
+.text-box h4{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    padding-top: 170px;
+    padding-left: 15px;
+}
+
+.text-box p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    padding-top: 100px;
+}
+
+
+
+
+
+
+#tax-image{
+    max-width: 320px;
+    float: left;
+    height:250px;
+    padding-top: 100px;
+    padding-left: -00px;
+    
+}
+
+#tax-p{
+    padding-left: 100px;
+    padding-bottom: 10px;
+}
+
