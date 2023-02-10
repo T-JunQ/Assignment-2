@@ -41,6 +41,6 @@ $(document).ready(function ($) {
   }
 
   $("#mobile_menu").on("click", function () {
-    $("div#menu").toggle();
+    $("#nav_buttons").toggle();
   });
 });

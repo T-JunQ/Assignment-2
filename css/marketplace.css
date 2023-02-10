@@ -160,4 +160,42 @@ div::-webkit-scrollbar-track {
     font-size: 12px;
 }
 
+@media (max-width:700px) {
+    .form-group{
+        margin-left: 1px;
+        width: 100px;
+        margin-right: -30px;
+    }
+    #search_input{
+        width: 100px;
+        margin-left: 10px;
+    }
+}
+
+.modal-body{
+    background-color: #452470;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-footer{
+    border-top:#23003A 2px solid;
+    background-color: #452470;
+}
+
+.modal-content{
+    background-color: #452470;
+    color: aliceblue;
+}
+
+.modal-header{
+    border-bottom:#23003A 2px solid;
+    background-color: #452470;
+}
+
+#listingheader{
+    text-align: center;
+}
+
 

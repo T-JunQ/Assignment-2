@@ -225,4 +225,69 @@ background-color:darkblue;
     background-color: #452470;
 }
 
+@media (max-width:1024px) {
+    #profile_pic{
+        width:100px;
+        height:100px;
+        margin-left: -150px;
+    }
+    
+    #profile_details{
+        width: 200px;
+        text-align: center;
+        margin-left:auto;
+        margin-right: auto;
+    }
+    
+    #username{
+        margin-top: 3%;
+        font-weight: 700;
+        border-radius: 10px;
+        padding-bottom: 2px;
+        display: inline;
+        border: none;
+        text-align: left;
+        margin-left: 10px;
+        
+    }
+    
+    #email{
+        display: none;
+    }
+    
+    #edit_profile{
+        padding: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top: 0px;
+        background-color: rgb(95, 82, 183);
+    }
+    
+    #logout{
+        margin-top: 3px;
+        background-color:rgb(187, 5, 5);
+        border-radius: 8px;
+    }
+    #inventory{  
+        position: relative; 
+        left: 1px;
+        bottom: 0%;
+        width: 90%;
+        height: 60%;
+        background-color:darkslateblue;
+        gap:10px;
+        padding: 10px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #profile_window
+    {
+        position: relative;
+        width: 95%;
+        height:91%;
+    }
+
+}
 

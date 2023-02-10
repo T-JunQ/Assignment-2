@@ -254,8 +254,8 @@ $("document").ready(function () {
     $("#points_select > option").each(function () {
       let value = parseInt($(this).val());
       console.log(value);
-      console.log(total - points);
-      if ((points <= value && total - points <= 0) || points == 0) {
+      console.log(points);
+      if (points <= value || total - points <= 0 || points == 0) {
         console.log(value);
         $(this).attr("disabled", true);
       }
