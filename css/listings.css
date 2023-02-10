@@ -130,4 +130,10 @@ background-color:darkblue;
     font-size: 12px;
 }
 
+p{
+    margin-left: auto;
+    margin-right: auto;
+    color: aliceblue;
+}
+
 

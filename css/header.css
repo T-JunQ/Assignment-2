@@ -13,12 +13,13 @@ nav{
     z-index: 10;
     margin:0px;
     padding:0px;
+    border-bottom: 1px solid white;
 }
 
 #nav_buttons{
     float: right;
     margin: 10px;
-    margin-top: 9px;
+    margin-top: 8px;
     margin-right: 10px;
 }
 
@@ -63,7 +64,9 @@ nav{
     100%{color:gray}
 } 
 
-
+#menu{
+    margin-top: -37px;
+}
 
 
 
@@ -131,9 +134,65 @@ nav img{
     color: blue;
 }
 
-#reward{
-    color: aliceblue;
-    border: white;
-    border-radius: 10px;
+
+
+#mobile_menu{
+    float: right;
+    margin-right: 15px;
+    margin-top: -2px;
+    font-size: 30px;
+    color: white;
+    display: none;
+}
+
+@media (max-width: 700px) {
+    
+    .text_a {
+        display: block;
+        padding: 12px 0px;
+        border: 1px solid white;
+    }
+
+    .nav_icons{
+        display: none;
+    }
+    
+    #nav_buttons div{
+        display: block;
+        margin-left: auto;
+        margin-top: 20px;
+        margin-right: auto;
+    }
+    
+    #nav_profile{
+        
+    }
+
+    
+    #nav_profilepic{
+        
+    }
+    
+    #nav_balance{
+        
+    }
+    
+    #nav_add{
+        
+    }
+
+    #menu
+    {
+        display: block;
+        background-color: #23003A;
+        height: 300px;
+        padding-top: 0px;
+        width: 100%;
+    }
+    
+
+    #mobile_menu{
+        display: inline;
+    }
 }
 

@@ -3,9 +3,13 @@ $("document").ready(function () {
   let apikey = "63b648a1969f06502871aa39";
   let modal = $("#addedtocart");
   let account = JSON.parse(sessionStorage.getItem("Account"));
+  $("#listings").html(`
+        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_kxsd2ytq.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;margin-left:auto;margin-right:auto;align-self:center;"  loop  autoplay></lottie-player>
+        `);
   getListings();
 
-  function getListings() {
+  async function getListings() {
+    await sleep(2000);
     var settings = {
       async: true,
       crossDomain: true,
@@ -15,11 +19,6 @@ $("document").ready(function () {
         "content-type": "application/json",
         "x-apikey": apikey,
         "cache-control": "no-cache",
-      },
-      beforeSend: function () {
-        $("#listings").html(`
-        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_kxsd2ytq.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;margin-left:auto;margin-right:auto;align-self:center;"  loop  autoplay></lottie-player>
-        `);
       },
     };
     $.ajax(settings).done(function (response) {
@@ -40,7 +39,13 @@ $("document").ready(function () {
             </div>`;
         }
         $("#listings").html(content);
+        if (content == "") {
+          $("#listings").html(`<p>You have no current listings active</p>`);
+        }
       }
     });
+  }
+  function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 });

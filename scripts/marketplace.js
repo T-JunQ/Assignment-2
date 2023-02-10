@@ -3,6 +3,9 @@ $("document").ready(function () {
   let apikey = "63b648a1969f06502871aa39";
   let modal = $("#addedtocart");
   let cart = JSON.parse(localStorage.getItem("cart"));
+  $("#mp_listings").html(`
+        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_kxsd2ytq.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;margin-left:auto;margin-right:auto;align-self:center;"  loop  autoplay></lottie-player>
+        `);
   getListings();
 
   $("#game_filter").change(function () {
@@ -101,7 +104,8 @@ $("document").ready(function () {
     });
   }
 
-  function getListings() {
+  async function getListings() {
+    await sleep(2000);
     var settings = {
       async: true,
       crossDomain: true,
@@ -112,17 +116,32 @@ $("document").ready(function () {
         "x-apikey": apikey,
         "cache-control": "no-cache",
       },
-      beforeSend: function () {
-        $("#mp_listings").html(`
-        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_kxsd2ytq.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;margin-left:auto;margin-right:auto;align-self:center;"  loop  autoplay></lottie-player>
-        `);
-      },
     };
     $.ajax(settings).done(function (response) {
       sessionStorage.setItem("listings", JSON.stringify(response));
       let content = "";
+      let buyer = JSON.parse(sessionStorage.getItem("Account"))._id;
+      console.log(response);
       for (var i = 0; i < response.length; i++) {
         var price = parseFloat(response[i].price).toFixed(2);
+        let seller = response[i].seller[0]._id;
+        if (cart != null) {
+          let boon = false;
+          for (var c = 0; c < cart.length; c++) {
+            if (cart[c]._id == response[i]._id) {
+              boon = true;
+              console.log(cart[c]._id);
+            }
+          }
+          if (boon == true) {
+            continue;
+          }
+        }
+        if (buyer == seller) {
+          console.log(seller);
+          console.log(buyer);
+          continue;
+        }
         content = `
         ${content}
         <div class="listing" id="${response[i]._id}">
@@ -141,23 +160,9 @@ $("document").ready(function () {
         </div>`;
       }
       $("#mp_listings").html(content);
-      let buyer = JSON.parse(sessionStorage.getItem("Account")).username;
-
-      $(".listing").each(function () {
-        let seller = $(this).children("div.seller").text().trim();
-
-        if (cart != null) {
-          for (var i = 0; i < cart.length; i++) {
-            if (cart[i]._id == $(this).attr("id")) {
-              $(this).hide();
-            }
-          }
-        }
-        if (seller == buyer) {
-          console.log(seller);
-          $(this).hide();
-        }
-      });
     });
+  }
+  function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 });

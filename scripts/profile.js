@@ -6,6 +6,8 @@ $(document).ready(function () {
   let item;
   console.log(account);
   $("#login").hide();
+
+  // If logged in, shows profile information. Else, will hide logout button, disable edit profile and show login button
   if (account == null) {
     $("#inventory").html(`<p>Please log in to see your inventory</p>`);
     $("#edit_profile").prop("disabled", true);
@@ -15,24 +17,47 @@ $(document).ready(function () {
     console.log(account.inventory.items[3]);
     loadInventory();
     $("#username").text(account.username);
-    $("#profile_pic").attr("src", account.picture);
     $("#email").text(account.email);
+    $("#points").text(
+      `Points: ${parseInt(localStorage.getItem(`${account._id}`))}`
+    );
+    if (account.picture == null) {
+      $("#profile_pic").attr(
+        "src",
+        "../pics/vecteezy_profile-icon-design-vector_5544718.jpg"
+      );
+    } else {
+      $("#profile_pic").attr("src", account.picture);
+    }
   }
 
   console.log(localStorage);
+  // Logging out function
   $("#logout").click(function () {
     sessionStorage.clear();
+    localStorage;
     window.location.href = "../index.html";
+    localStorage.removeItem("addr");
+    localStorage.removeItem("addr2");
+    localStorage.removeItem("cardno");
+    localStorage.removeItem("cart");
+    localStorage.removeItem("city");
+    localStorage.removeItem("state");
+    localStorage.removeItem("rmb_card");
+    localStorage.removeItem("zip");
   });
 
+  // Link to edit profile page
   $("#edit_profile").click(function () {
     window.location.href = "../templates/editprofile.html";
   });
 
+  // Link to login page (shows only if account is null)
   $("#login").click(function () {
     window.location.href = "../templates/login.html";
   });
 
+  // List item by changing modal body
   $("#inventory").on("click", ".listitem", function (e) {
     item = $(this).parent();
     let itemimg = item.find(".img_container")[0].outerHTML;
@@ -47,11 +72,13 @@ $(document).ready(function () {
     listingmodal.modal("show");
   });
 
+  // When user submit listing form, creates a new record in listing and updates user's inventory
   $("#list_form").submit(async function (e) {
     e.preventDefault();
     let id = item.attr("id");
     let inventory = account.inventory.items;
     let price = $("#price").val();
+    let points = parseInt(localStorage.getItem(`${account._id}`));
     if ($.isNumeric(price) == true) {
       price = parseFloat(price).toFixed(2);
       for (var i = 0; i < inventory.length; i++) {
@@ -62,6 +89,12 @@ $(document).ready(function () {
           console.log(inventory);
           break;
         }
+      }
+      if (isNaN(points)) {
+        localStorage.setItem(2);
+      } else {
+        points += 2;
+        localStorage.setItem(`${account._id}`, points);
       }
       console.log(item);
       postListing(item.name, item.game, item.image, price, account);
@@ -145,9 +178,10 @@ $(document).ready(function () {
     $.ajax(settings).done(function (response) {
       console.log(response);
       let modalbody = listingmodal.find(".modal-body");
+      let points = localStorage.getItem(`${account._id}`);
       sessionStorage.setItem("Account", JSON.stringify(response));
       modalbody.html(
-        `<h3>Item Listed! </h3><br><h5>Item: ${item.name}</h5><h5>Price: ${item.price}</h5>`
+        `<h3>Item Listed! </h3><br><h5>Item: ${item.name}</h5><h5>Price: ${item.price}</h5><br><h7>Points: ${points}</h7>`
       );
       $("#list_form").hide();
       $("#spinner").hide();

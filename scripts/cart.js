@@ -8,9 +8,9 @@ $("document").ready(function () {
   let successmodal = $("#sucess");
   let loading = $("#loading");
   let usepoints = 0;
-  showPoints();
 
   showItems();
+  showPoints();
 
   if (account == null) {
     $("#cart_listings").html("<p>Please Log in to buy items</p>");
@@ -60,7 +60,7 @@ $("document").ready(function () {
     let checkout = confirm("Are you sure you want to check-out?");
     if (checkout == true) {
       if (account.balance - total >= 0) {
-        let points = parseInt(localStorage.getItem("points"));
+        let points = parseInt(localStorage.getItem(`${account._id}`));
         total -= usepoints;
         points -= usepoints;
         points += total / 10;
@@ -87,7 +87,7 @@ $("document").ready(function () {
         );
         await sleep(2000);
         sessionStorage.setItem("Account", JSON.stringify(account));
-        localStorage.setItem("points", points);
+        localStorage.setItem(`${account._id}`, points);
         successmodal.modal("show");
         $("#sucess").on("hidden.bs.modal", function () {
           window.location.reload();
@@ -245,16 +245,17 @@ $("document").ready(function () {
   }
 
   function showPoints() {
-    if (localStorage.getItem("points") == null) {
-      localStorage.setItem("points", 0);
+    let id = account._id;
+    if (localStorage.getItem(`${id}`) == null) {
+      localStorage.setItem(`${id}`, 0);
     }
-    let points = parseInt(localStorage.getItem("points"));
+    let points = parseInt(localStorage.getItem(`${id}`));
     $("#show_points").text(`Points: ${points}`);
     $("#points_select > option").each(function () {
       let value = parseInt($(this).val());
       console.log(value);
-      console.log(points >= value);
-      if (points <= value && total - points <= 0) {
+      console.log(total - points);
+      if ((points <= value && total - points <= 0) || points == 0) {
         console.log(value);
         $(this).attr("disabled", true);
       }

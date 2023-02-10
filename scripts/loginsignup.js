@@ -65,6 +65,11 @@ $("document").ready(function () {
       },
       processData: false,
       data: JSON.stringify(jsondata),
+      beforeSend: function () {
+        $("#submit").html(
+          `<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_ht6o1bdu.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px; margin-left:auto; margin-right:auto;"  loop  autoplay></lottie-player>`
+        );
+      },
     };
     $.ajax(settings).done(function (response) {
       console.log(response);
@@ -87,7 +92,7 @@ $("document").ready(function () {
         "cache-control": "no-cache",
       },
       beforeSend: function () {
-        $("#login_submit").html(
+        $("#submit").html(
           `<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_ht6o1bdu.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px; margin-left:auto; margin-right:auto;"  loop  autoplay></lottie-player>`
         );
       },

@@ -23,7 +23,6 @@ $(document).ready(function ($) {
     $("#nav_username").text(account.username);
     $("#nav_balance p").text(`$ ${parseFloat(account.balance).toFixed(2)}`);
     $("#nav_profile").click(function () {
-      console.log("he");
       window.location.href = "profile.html";
     });
     console.log(account.picture);
@@ -40,4 +39,8 @@ $(document).ready(function ($) {
       e.preventDefault();
     });
   }
+
+  $("#mobile_menu").on("click", function () {
+    $("div#menu").toggle();
+  });
 });
