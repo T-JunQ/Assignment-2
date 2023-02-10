@@ -3,9 +3,13 @@ $("document").ready(function () {
   let apikey = "63b648a1969f06502871aa39";
   let modal = $("#addedtocart");
   let cart = JSON.parse(localStorage.getItem("cart"));
+
+  // Plays lottie animation on load
   $("#mp_listings").html(`
         <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_kxsd2ytq.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;margin-left:auto;margin-right:auto;align-self:center;"  loop  autoplay></lottie-player>
         `);
+
+  // Gets all the listings
   getListings();
 
   $("#game_filter").change(function () {
@@ -16,6 +20,7 @@ $("document").ready(function () {
     filter();
   });
 
+  // Sort items by prices
   $("#sortby_filter").change(function () {
     let sortby = $(this).find(":selected").data("sortby");
     let listings = $(".listing");

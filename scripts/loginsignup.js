@@ -1,12 +1,15 @@
 $("document").ready(function () {
   let apikey = "63b648a1969f06502871aa39";
   let rmbme = localStorage.getItem("rememberme");
+
+  // Checks if remember me is checked before, then loads in values
   if (rmbme == "true") {
     $("#remember_me").prop("checked", true);
     $("#login_email").val(localStorage.getItem("email"));
     $("#login_pwd").val(localStorage.getItem("pwd"));
   }
 
+  // Signup: checks if both passwords matches, then calls createAccount
   $("#signup").submit(function (e) {
     e.preventDefault();
     let email = $("#signup_email").val();
@@ -16,10 +19,11 @@ $("document").ready(function () {
     if (pwd == pwd2) {
       createAccount(email, name, pwd);
     } else {
-      alert("Passwords do not match");
+      alert("Your passwords do not match!");
     }
   });
 
+  // Login: checks if user checks on remmeber me and saves it to local storage, then calls matchaccounts
   $("#login").submit(function (e) {
     e.preventDefault();
     let email = $("#login_email").val();
@@ -41,6 +45,7 @@ $("document").ready(function () {
     matchAccounts(email, pwd);
   });
 
+  // Creates a new account using information given and also validates if the account already exists
   function createAccount(email, username, password) {
     var jsondata = {
       email: email,
@@ -70,6 +75,11 @@ $("document").ready(function () {
           `<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_ht6o1bdu.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px; margin-left:auto; margin-right:auto;"  loop  autoplay></lottie-player>`
         );
       },
+      error: function () {
+        alert(
+          "Either the email address already has an account or the username is already in use"
+        );
+      },
     };
     $.ajax(settings).done(function (response) {
       console.log(response);
@@ -80,6 +90,7 @@ $("document").ready(function () {
     });
   }
 
+  // Matches input with the database and logs user in if they matches
   function matchAccounts(email, password) {
     var settings = {
       async: true,
