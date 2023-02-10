@@ -49,12 +49,12 @@ Github pages: https://t-junq.github.io/Assignment-2/
   - Inventory of items
 - Configure profile page
   - Change profile details
-
-### To Add:
-
-- Front Page to advertise service
-- Transactions and listings
+  Front Page to advertise service
+- Viewing of own Listings
 - Listing of items page
+## Testing
+
+https://docs.google.com/spreadsheets/d/1kR23uso5Wqc3RXsSmsQgikbQWH5TAqPeT168BzI1tjc/edit?usp=sharing
 
 ## Library
 
@@ -66,6 +66,12 @@ https://getbootstrap.com/
 
 Font Awesome - Icons for html
 https://fontawesome.com/
+
+Lottie - Easy and lighweight animations (Mainly for spinners)
+https://lottiefiles.com/
+
+RestDB - Easy to use restAPI database
+https://restdb.io/
 
 ## Refrences
 
@@ -87,9 +93,7 @@ https://www.pngfind.com/mpng/hmwRhhw_csgo-skins-transparent-hd-png-download/
 
 https://tenor.com/view/background-gif-26550124
 
-- Items
-
-Websites:
+- Items' websites
 
 https://csgostash.com
 
@@ -98,3 +102,5 @@ https://skin-tracker.com/valorant
 ### Aknowledgement
 
 Logo made using https://logo.com/
+
+Some code refrenced from https://www.w3schools.com/
